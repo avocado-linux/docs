@@ -4,11 +4,13 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://docs.avocadolinux.org',
+  base: '/',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Avocado Linux',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/avocado-linux',
 			},
 			sidebar: [
 				{
