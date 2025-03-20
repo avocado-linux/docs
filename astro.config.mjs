@@ -16,9 +16,10 @@ export default defineConfig({
 				{
           label: 'Community',
           items: [
-            { label: 'Code of Conduct', link: '/coc/' }
+            { label: 'Code of Conduct', link: '/coc/' },
+            { label: 'Privacy Statement', link: '/privacy/' }
           ]
-        }
+        },
 			],
 		}),
 	],
