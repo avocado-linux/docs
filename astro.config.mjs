@@ -10,7 +10,8 @@ export default defineConfig({
 		starlight({
 			title: 'Avocado Linux',
 			logo: {
-				src: './src/assets/white-color.png',
+				light: './src/assets/dark-color.png',
+				dark: './src/assets/white-color.png',
 				alt: 'Avocado Linux Logo',
 				replacesTitle: true
 			},
