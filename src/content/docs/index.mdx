@@ -1,36 +1,43 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Introduction
+description: A modern, composable embedded Linux distribution built for rapid development and secure deployment.
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+# Welcome to Avocado OS
 
-## Next steps
+**Avocado OS** is a next-generation embedded Linux distribution that bridges the gap between rapid development and production-grade security. Built by embedded developers for embedded developers, Avocado rethinks how Linux systems are built, deployed, and maintained in modern products.
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+Whether you're prototyping on a dev board or shipping to thousands of devices in the field, Avocado helps you move fast **without compromising on reliability, security, or maintainability**.
+
+---
+
+## What Makes Avocado OS Different?
+
+### 🧩 Composable by Design
+Instead of traditional monolithic builds, Avocado uses a **layered architecture**. Developers assemble systems using a small, immutable base and extend it with modular **system extensions**, **configuration overlays**, and **portable services**. This makes it simple to develop, test, and deploy without managing partitions or modifying core images.
+
+### 🔐 Security-First Foundation
+Avocado integrates modern security features out of the box:
+- Secure Boot
+- dm-verity for root filesystem integrity
+- Full-disk encryption with LUKS
+- Cryptographic identity for attestation and remote verification
+
+These tools ensure that only verified software runs on your devices—from bootloader to user space.
+
+### 🛠 Built with Yocto, Built to Scale
+Avocado is fully based on the **Yocto Project**, making it highly customizable for your hardware while maintaining consistency across platforms. Whether you're targeting a single-board computer or a production SoC, Avocado provides a clean path from development to deployment.
+
+### 🌱 Developer Experience Matters
+With prebuilt layers, sensible defaults, and a vibrant extension ecosystem, Avocado takes the friction out of embedded Linux development. Developers can focus on building features—not wrestling with build systems or package management.
+
+---
+
+## Join the Community
+
+Avocado OS is an open-source project driven by its community. Join us to shape the future of embedded Linux:
+
+- 💻 [GitHub](https://github.com/peridio/meta-avocado)
+- 💬 [Community Discord](https://discord.gg/avocadolinux)
+
+---

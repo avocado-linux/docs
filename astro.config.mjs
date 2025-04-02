@@ -9,10 +9,18 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Avocado Linux',
-			social: {
-				github: 'https://github.com/avocado-linux',
+			logo: {
+				src: './src/assets/white-color.png',
+				alt: 'Avocado Linux Logo',
+				replacesTitle: true
 			},
 			sidebar: [
+				{
+					label: 'Introduction',
+					items: [
+						{ label: 'Introduction', link: '/' }
+					]
+				},
 				{
           label: 'Community',
           items: [
