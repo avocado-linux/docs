@@ -32,12 +32,6 @@ The Avocado SDK provides a containerized development environment consisting of:
 - Extension building tools (squashfs-tools, btrfs-tools, genimage)
 - Target sysroots for development
 
-**Package Repository Server**:
-- Hosts pre-built RPM packages for all supported architectures
-- Provides nativesdk packages (toolchain components)
-- Target packages (applications, libraries, dev packages)
-- Extension metadata and dependencies
-
 **Build Tools**:
 - `avocado-repo`: Package installation and management
 - `avocado-build`: Extension and image building
@@ -51,24 +45,21 @@ The Avocado SDK provides a containerized development environment consisting of:
 
 ### Prerequisites
 
-- Linux development machine (Ubuntu 20.04+, Fedora 35+)
+- Linux development machine (Ubuntu 22.04+, Fedora 39+)
 - Podman or Docker
 - 20GB+ available disk space
-- Access to Avocado OS base images (built or pre-downloaded)
+- Access to Avocado OS base images (online or pre-downloaded)
 
 ### Using Pre-built Components
 
-If you have access to pre-built base images and SDK containers:
+Fetch pre-built base images and SDK containers:
 
 ```bash
-# Pull SDK container (when available)
+# Pull SDK container
 podman pull avocadolinux/sdk:latest
 
 # Start development environment
-cd meta-avocado/support/sdk-test
-export DEPLOY_DIR=/path/to/deploy/rpm
-podman-compose up -d package-repo
-podman-compose run sdk /bin/bash
+docker run -it --rm avocadolinux/sdk:latest bash
 ```
 
 ### Supported Target Platforms
@@ -76,7 +67,7 @@ podman-compose run sdk /bin/bash
 Available kas machine configurations:
 
 ```bash
-# ARM-based targets
+# Arm-based targets
 kas/machine/imx91-frdm.yml           # NXP i.MX91 FRDM board
 kas/machine/imx93-evk.yml            # NXP i.MX93 EVK board  
 kas/machine/imx93-frdm.yml           # NXP i.MX93 FRDM board
@@ -184,9 +175,6 @@ avocado-repo sdk install nativesdk-gdb nativesdk-strace
 # Install development headers for cross-compilation
 avocado-repo target-dev install openssl-dev libcurl-dev sqlite-dev
 
-# Install Qt development packages (if available)
-avocado-repo target-dev install qtbase5-dev
-
 # Install Python development
 avocado-repo target-dev install python3-dev
 ```
@@ -194,22 +182,16 @@ avocado-repo target-dev install python3-dev
 ### Installing Extension Packages
 
 ```bash
-# Install applications for system extension
-avocado-repo sysext install nginx python3-flask redis
+# Install web application framework
+avocado-repo sysext install python3-flask
 
-# Install system services
-avocado-repo sysext install openssh-server docker podman
-
-# Install libraries (only if not in base system)
-avocado-repo sysext install libssl1.1 libcurl4
+# Install system service
+avocado-repo sysext install openssh-server
 ```
 
 ### Installing Configuration Packages
 
 ```bash
-# Install configuration management tools
-avocado-repo confext install ansible-core
-
 # Install certificate management
 avocado-repo confext install ca-certificates
 
@@ -231,7 +213,7 @@ System extensions (sysext) extend the `/usr` and `/opt` hierarchies with:
 
 ```bash
 # 1. Install packages into sysext sysroot
-avocado-repo sysext install nginx python3-flask supervisor
+avocado-repo sysext install python3-flask
 
 # 2. Build the extension
 avocado-build sysext webserver
@@ -281,24 +263,6 @@ EOF
 
 # 5. Build extension
 avocado-build sysext myapp
-```
-
-#### Multi-Service Extensions
-
-```bash
-# Install multiple related services
-avocado-repo sysext install nginx php-fpm mysql-server
-
-# Create service dependencies
-mkdir -p $AVOCADO_SDK_SYSROOTS/sysext/usr/lib/systemd/system/nginx.service.d
-cat > $AVOCADO_SDK_SYSROOTS/sysext/usr/lib/systemd/system/nginx.service.d/lamp-deps.conf << EOF
-[Unit]
-Requires=php-fpm.service mysql.service
-After=php-fpm.service mysql.service
-EOF
-
-# Build LAMP stack extension
-avocado-build sysext lamp-stack
 ```
 
 ### Extension Verification
@@ -500,25 +464,24 @@ If you need to build Avocado OS components from source rather than using pre-bui
 
 ```bash
 # Clone repository
-git clone https://github.com/avocado-os/meta-avocado.git
+git clone --branch scarthgap https://github.com/avocado-os/meta-avocado.git
 cd meta-avocado
 
 # Build target platform (creates base images + packages)
 source scripts/init-build kas/machine/qemux86-64.yml
-kas build kas/machine/qemux86-64.yml --target avocado-complete
+kas build $KAS_YML
 
 # Build SDK container
 source scripts/init-build kas/sdk/container-x86_64.yml
-kas build kas/sdk/container-x86_64.yml
+kas build $KAS_YML
 
 # Import SDK container
-podman import build-container-x86_64/tmp/deploy/images/avocado-container-x86_64/avocado-image-container-avocado-container-x86_64.rootfs.tar.bz2 avocadolinux/sdk:dev
+podman import build-container-x86_64/build/tmp/deploy/images/avocado-container-x86_64/avocado-image-container-avocado-container-x86_64.rootfs.tar.bz2 avocadolinux/sdk:dev
 
 # Start development environment
-cd support/sdk-test
-export DEPLOY_DIR=../../build-qemux86-64/tmp/deploy
-podman-compose up -d package-repo
-podman-compose run sdk /bin/bash
+export DEPLOY_DIR=$(pwd)/build-qemux86-64-secureboot/build/tmp/deploy
+podman compose -f support/sdk-test/docker-compose.yml down --remove-orphans
+podman compose -f support/sdk-test/docker-compose.yml run sdk /bin/bash
 ```
 
 #### Build System Requirements
@@ -526,7 +489,7 @@ podman-compose run sdk /bin/bash
 - **RAM**: 16GB+ recommended for builds
 - **Storage**: 100GB+ for complete builds
 - **CPU**: Multi-core recommended
-- **OS**: Ubuntu 20.04+, Fedora 35+
+- **OS**: Ubuntu 22.04+, Fedora 39+
 
 #### Available Build Targets
 
