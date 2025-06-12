@@ -182,8 +182,8 @@ avocado-repo target-dev install python3-dev
 ### Installing Extension Packages
 
 ```bash
-# Install web application framework
-avocado-repo sysext install python3-flask
+# Install packages into sysext sysroot
+avocado-repo sysext install nginx python3-flask supervisor
 
 # Install system service
 avocado-repo sysext install openssh-server
