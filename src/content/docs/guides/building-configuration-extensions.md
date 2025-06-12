@@ -3,8 +3,6 @@ title: Building Configuration Extensions
 description: How to build configuration extensions (confext) with the Avocado SDK.
 ---
 
-# Building Configuration Extensions
-
 ## Understanding Configuration Extensions
 
 Configuration extensions (confext) manage the `/etc` hierarchy:

@@ -3,8 +3,6 @@ title: Advanced Workflows
 description: Advanced workflows and techniques for the Avocado SDK.
 ---
 
-# Advanced Workflows
-
 ## Building from Source
 
 If you need to build Avocado OS components from source rather than using pre-built images:

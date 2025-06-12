@@ -3,8 +3,6 @@ title: Building System Extensions
 description: How to build system extensions (sysext) with the Avocado SDK.
 ---
 
-# Building System Extensions
-
 ## Understanding System Extensions
 
 System extensions (sysext) extend the `/usr` and `/opt` hierarchies with:

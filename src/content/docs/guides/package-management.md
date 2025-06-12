@@ -3,8 +3,6 @@ title: Package Management
 description: How to manage packages in the Avocado SDK.
 ---
 
-# Package Management
-
 ## Understanding Package Types
 
 **nativesdk packages**: Run on development host (in SDK)

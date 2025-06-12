@@ -3,8 +3,6 @@ title: Creating Complete System Images
 description: How to create complete system images with the Avocado SDK.
 ---
 
-# Creating Complete System Images
-
 ## Building Var Partition
 
 The var partition contains extensions and is built separately:

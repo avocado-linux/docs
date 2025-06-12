@@ -3,8 +3,6 @@ title: Working with SDK Containers
 description: How to work with SDK containers and their environment.
 ---
 
-# Working with SDK Containers
-
 ## SDK Container Environment
 
 When you enter the SDK container, several key environment variables are configured:

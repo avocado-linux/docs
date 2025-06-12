@@ -3,8 +3,6 @@ title: Hardware-in-the-Loop Development
 description: How to perform hardware-in-the-loop development with the Avocado SDK.
 ---
 
-# Hardware-in-the-Loop Development
-
 ## Live Development Setup
 
 For iterative development on physical hardware:

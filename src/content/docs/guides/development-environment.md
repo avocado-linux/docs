@@ -3,8 +3,6 @@ title: Setting Up Development Environment
 description: How to set up your development environment for the Avocado SDK.
 ---
 
-# Setting Up Development Environment
-
 ## Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)

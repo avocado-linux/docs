@@ -3,8 +3,6 @@ title: SDK Architecture
 description: Overview of the Avocado SDK architecture and components.
 ---
 
-# SDK Architecture
-
 ## Components
 
 The Avocado SDK provides a containerized development environment consisting of:
