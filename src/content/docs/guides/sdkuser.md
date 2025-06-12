@@ -45,31 +45,7 @@ The Avocado SDK provides a containerized development environment consisting of:
 
 ### Architecture Overview
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                 Development Host                        │
-│  ┌─────────────────────┐  ┌───────────────────────────┐ │
-│  │   Package Repo      │  │      SDK Container        │ │
-│  │                     │  │                           │ │
-│  │ • RPM repositories  │  │ • Cross-compilation       │ │
-│  │ • nativesdk pkgs    │◄─┤   toolchain               │ │
-│  │ • Target packages   │  │ • Target sysroots         │ │
-│  │ • Extension tools   │  │ • Extension builders      │ │
-│  └─────────────────────┘  └───────────────────────────┘ │
-└─────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────┐
-│                  Target Device                          │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐  │
-│  │  Base OS    │  │   sysext    │  │    confext      │  │
-│  │             │  │             │  │                 │  │
-│  │ • Kernel    │  │ • Apps      │  │ • Config files  │  │
-│  │ • systemd   │  │ • Libraries │  │ • Environment   │  │
-│  │ • Base tools│  │ • Services  │  │ • Certificates  │  │
-│  └─────────────┘  └─────────────┘  └─────────────────┘  │
-└─────────────────────────────────────────────────────────┘
-```
+![Architecture Overview](../arch-over.png)
 
 ## Setting Up Development Environment
 
