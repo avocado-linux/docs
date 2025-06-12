@@ -23,6 +23,12 @@ export default defineConfig({
 					]
 				},
 				{
+					label: 'Guides',
+					items: [
+						{ label: 'SDK User Guide', link: '/guides/sdkuser/' }
+					]
+				},
+				{
           label: 'Community',
           items: [
             { label: 'Code of Conduct', link: '/coc/' },
