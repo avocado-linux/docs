@@ -16,10 +16,10 @@ Fetch pre-built base images and SDK containers:
 
 ```bash
 # Pull SDK container
-podman pull avocadolinux/sdk:latest
+podman pull avocadolinux/sdk:apollo-edge
 
 # Start development environment
-docker run -it --rm avocadolinux/sdk:latest bash
+podman run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
 ## Supported Target Platforms

@@ -15,10 +15,18 @@ AVOCADO_SDK_SYSROOTS="/opt/_avocado/sdk/sysroots"
 # Target information
 AVOCADO_SDK_TARGET="qemux86-64"  # Or your selected target
 
-# Cross-compilation environment (auto-configured)
-CC="${TARGET_PREFIX}gcc"
-CXX="${TARGET_PREFIX}g++"
-# ... other toolchain variables
+# DNF path
+DNF_SDK_HOST_PREFIX=/opt/_avocado/sdk
+
+# DNF options
+DNF_SDK_HOST=    dnf     --setopt=varsdir=/opt/_avocado/sdk/etc/dnf/vars     --setopt=reposdir=/opt/_avocado/sdk/etc/yum.repos.d     --releasever=apollo/edge     --best     --setopt=tsflags=noscripts
+DNF_SDK_HOST_OPTS=    --setopt=cachedir=/opt/_avocado/sdk/var/cache     --setopt=logdir=/opt/_avocado/sdk/var/log     --setopt=persistdir=/opt/_avocado/sdk/var/lib/dnf
+
+# RPM config path
+RPM_ETCCONFIGDIR=/opt/_avocado/sdk
+
+# RPM install options
+RPM_NO_CHROOT_FOR_SCRIPTS=1
 ```
 
 ## Sysroot Structure
