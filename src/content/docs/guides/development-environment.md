@@ -18,7 +18,11 @@ Fetch pre-built base images and SDK containers:
 # Pull SDK container
 podman pull avocadolinux/sdk:apollo-edge
 
+# Create a directory to save the SDK to
+mkdir avocado
+
 # Start development environment
+cd avocado
 podman run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
 ```
 

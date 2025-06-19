@@ -16,7 +16,7 @@ The Avocado SDK provides a containerized development environment consisting of:
 **Build Tools**:
 - `avocado-repo`: Package installation and management
 - `avocado-build`: Extension and image building
-- `avocado-run-qemu`: QEMU testing (for supported targets)
+- `avocado-run-qemu`: QEMU testing
 
 ## Architecture Overview
 
