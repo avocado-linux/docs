@@ -45,4 +45,4 @@ kas/machine/qemux86-64.yml           # QEMU x86_64 virtualization
 
 ## Extension Image Build Pipeline
 
-![Extension Image Build Pipeline](../../assets/sdkcontainer.png)
+![Extension Image Build Pipeline](../sdkcontainer.png)

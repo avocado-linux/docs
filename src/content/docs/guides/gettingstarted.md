@@ -102,5 +102,5 @@ The peridiod system extension should start automatically.
 
 ## systemd-sysext merge
 
-![systemd-sysext merge](../../assets/sysext.png)
+![systemd-sysext merge](../sysext.png)
 
