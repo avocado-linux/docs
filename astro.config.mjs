@@ -27,13 +27,7 @@ export default defineConfig({
 					items: [
 						{ label: 'SDK Architecture', link: '/guides/sdk-architecture/' },
 						{ label: 'Development Environment', link: '/guides/development-environment/' },
-						{ label: 'SDK Containers', link: '/guides/sdk-containers/' },
-						{ label: 'Package Management', link: '/guides/package-management/' },
-						{ label: 'Building System Extensions', link: '/guides/building-system-extensions/' },
-						{ label: 'Building Configuration Extensions', link: '/guides/building-configuration-extensions/' },
-						{ label: 'Creating System Images', link: '/guides/creating-system-images/' },
-						{ label: 'Hardware-in-the-Loop', link: '/guides/hardware-in-the-loop/' },
-						{ label: 'Advanced Workflows', link: '/guides/advanced-workflows/' }
+						{ label: 'Getting Started', link: '/guides/gettingstarted/' }
 					]
 				},
 				{
