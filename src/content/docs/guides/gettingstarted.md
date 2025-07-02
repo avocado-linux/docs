@@ -34,7 +34,7 @@ cd avocado
 podman run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
-For a list of supported Avocado SDK targets besides `qemux86-64`, return to the [Development Environment page](development-environment.md).
+For a list of supported Avocado SDK targets besides `qemux86-64`, return to the [Development Environment page](../development-environment.md).
 
 Perform all remaining exercises from inside the SDK container.
 
