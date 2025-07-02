@@ -28,20 +28,20 @@ podman run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt:z --entrypoi
 
 ## Supported Target Platforms
 
-Available kas machine configurations:
+Set the `AVOCADO_SDK_TARGET` environment variable to one of the following values when starting an SDK container.
 
-```bash
-# Arm-based targets
-kas/machine/imx91-frdm.yml           # NXP i.MX91 FRDM board
-kas/machine/imx93-evk.yml            # NXP i.MX93 EVK board  
-kas/machine/imx93-frdm.yml           # NXP i.MX93 FRDM board
-kas/machine/jetson-orin-nano-devkit-nvme.yml  # NVIDIA Jetson Orin Nano
-kas/machine/raspberrypi4.yml         # Raspberry Pi 4
-kas/machine/reterminal.yml           # Seeed reTerminal
+Available Avocado SDK targets:
 
-# x86 targets  
-kas/machine/qemux86-64.yml           # QEMU x86_64 virtualization
-```
+**Arm**:
+- `imx91-frdm`: NXP i.MX91 FRDM board
+- `imx93-evk`: NXP i.MX93 EVK board
+- `imx93-frdm`: NXP i.MX93 FRDM board
+- `jetson-orin-nano-devkit-nvme`: NVIDIA Jetson Orin Nano
+- `raspberrypi4`: Raspberry Pi 4
+- `reterminal`: Seeed reTerminal
+
+**x86**:
+- `qemux86-64`: QEMU x86_64 virtualization
 
 ## Extension Image Build Pipeline
 
