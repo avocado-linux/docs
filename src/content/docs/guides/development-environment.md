@@ -28,9 +28,7 @@ podman run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt:z --entrypoi
 
 ## Supported Target Platforms
 
-Set the `AVOCADO_SDK_TARGET` environment variable to one of the following values when starting an SDK container.
-
-Available Avocado SDK targets:
+Set the `AVOCADO_SDK_TARGET` environment variable to one of the following available Avocado SDK targets when starting an SDK container:
 
 **Arm**:
 - `imx91-frdm`: NXP i.MX91 FRDM board
