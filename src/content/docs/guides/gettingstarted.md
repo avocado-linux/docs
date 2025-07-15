@@ -10,7 +10,7 @@ Get up and running with the Avocado Linux SDK in minutes.
 ### Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- Podman or Docker installed
+- Podman installed
 - 20GB+ available disk space
 
 ### Installing and running the SDK
@@ -100,7 +100,11 @@ avocado-repo sdk install nativesdk-qemu
 avocado-run-qemu
 ```
 
-The peridiod system extension should start automatically.
+3. Start the peridiod service from inside the emulator:
+
+```bash
+systemctl start peridiod
+```
 
 ## systemd-sysext merge
 

@@ -6,7 +6,7 @@ description: How to set up your development environment for the Avocado SDK.
 ## Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- Podman or Docker
+- Podman installed
 - 20GB+ available disk space
 - Access to Avocado OS base images (online or pre-downloaded)
 
