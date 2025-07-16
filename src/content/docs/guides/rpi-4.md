@@ -18,3 +18,34 @@ The Raspberry Pi 4 is the most popular single-board computer on the planet. Rele
 
 **Wireless Connectivity:**
 - Built-in Broadcom BCM43455 wireless module with Wi-Fi and Bluetooth
+
+## Getting Started
+
+Get up and running with the Avocado Linux SDK in minutes.
+
+### Prerequisites
+
+- Linux development machine (Ubuntu 22.04+, Fedora 39+)
+- Podman installed
+- 20GB+ available disk space
+
+### Installing and running the SDK
+
+1. Pull the SDK container:
+
+```bash
+podman pull avocadolinux/sdk:apollo-edge
+```
+
+2. Create your workspace:
+
+```bash
+mkdir avocado-rpi4
+cd avocado-rpi4
+```
+
+3. Start the SDK environment:
+
+```bash
+podman run -it --rm -e AVOCADO_SDK_TARGET=raspberrypi4 -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+```

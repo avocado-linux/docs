@@ -22,3 +22,34 @@ The FRDM i.MX 93 is a low-cost development board for rapid prototyping. It inclu
 
 **Wireless Connectivity:**
 - Built-in NXP IW612 wireless module with Wi-Fi and Bluetooth
+
+## Getting Started
+
+Get up and running with the Avocado Linux SDK in minutes.
+
+### Prerequisites
+
+- Linux development machine (Ubuntu 22.04+, Fedora 39+)
+- Podman installed
+- 20GB+ available disk space
+
+### Installing and running the SDK
+
+1. Pull the SDK container:
+
+```bash
+podman pull avocadolinux/sdk:apollo-edge
+```
+
+2. Create your workspace:
+
+```bash
+mkdir imx93-frdm
+cd imx93-frdm
+```
+
+3. Start the SDK environment:
+
+```bash
+podman run -it --rm -e AVOCADO_SDK_TARGET=imx93-frdm -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+```
