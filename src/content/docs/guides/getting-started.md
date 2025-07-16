@@ -98,7 +98,7 @@ avocado-repo sdk install nativesdk-qemu
 avocado-run-qemu
 ```
 
-3. Start the peridiod service from inside the emulator:
+3. Start the peridiod service from inside the target VM:
 
 ```bash
 systemctl start peridiod

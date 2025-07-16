@@ -1,6 +1,6 @@
 ---
-title: Setting Up Development Environment
-description: How to set up your development environment for the Avocado SDK.
+title: Development Environment
+description: How to set up your Avocado SDK environment.
 ---
 
 ## Prerequisites
@@ -22,7 +22,7 @@ podman pull avocadolinux/sdk:apollo-edge
 mkdir avocado-<target>
 
 # Start development environment
-cd avocado
+cd avocado-<target>
 podman run -it --rm -e AVOCADO_SDK_TARGET=<target> -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
