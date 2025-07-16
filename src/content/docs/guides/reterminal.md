@@ -9,6 +9,8 @@ The Seeed reTerminal is a compact Human-Machine Interface (HMI) device that inte
 
 ## Technical Specifications
 
+Kristen asked me to add this.
+
 **Compute:**
 - Quad-Core 64-bit Arm Cortex-A72 CPU at 1.5 GHz
 
@@ -21,5 +23,5 @@ The Seeed reTerminal is a compact Human-Machine Interface (HMI) device that inte
 - Built-in Broadcom BCM43455 wireless module with Wi-Fi and Bluetooth
 
 **Display:**
-- 5-inch IPS capacitive multi-touch 720x1280 LCD screen 
+- 5-inch IPS capacitive multi-touch 720x1280 LCD screen
 - 293 PPI pixel density
