@@ -23,15 +23,6 @@ export default defineConfig({
 					]
 				},
 				{
-					label: 'Hardware',
-					items: [
-						{ label: 'NVIDIA Jetson Orin Nano Super', link: '/guides/jetson-orin-nano/' },
-						{ label: 'NXP FRDM i.MX 93', link: '/guides/frdm-imx-93/' },
-						{ label: 'Raspberry Pi 4', link: '/guides/rpi-4/' },
-						{ label: 'Seeed reTerminal', link: '/guides/reterminal/' }
-					]
-				},
-				{
 					label: 'SDK User Guide',
 					items: [
 						{ label: 'SDK Architecture', link: '/guides/sdk-architecture/' },
