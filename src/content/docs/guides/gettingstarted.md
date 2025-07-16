@@ -3,17 +3,15 @@ title: Getting Started
 description: Quick start guide for the Avocado Linux SDK.
 ---
 
-## Quick Start
-
 Get up and running with the Avocado Linux SDK in minutes.
 
-### Prerequisites
+## Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
 - Podman installed
 - 20GB+ available disk space
 
-### Installing and running the SDK
+## Installing and running the SDK
 
 1. Pull the SDK container:
 
@@ -38,7 +36,7 @@ For a list of supported Avocado SDK targets besides `qemux86-64`, return to the 
 
 Perform all remaining exercises from inside the SDK container.
 
-### Building a system extension
+## Building a system extension
 
 Let's build a system extension that adds peridiod to the runtime. 
 
@@ -60,7 +58,7 @@ avocado-build sysext peridiod
 ls -l /opt/_avocado/extensions/sysext/peridiod.raw
 ```
 
-### Building a bootable image
+## Building a bootable image
 
 1. Download the necessary images for the bootchain and the core rootfs to use when building a complete system image.
 
@@ -86,7 +84,7 @@ avocado-build image
 ls -l /opt/_avocado/output/avocado-image-qemu*.img
 ```
 
-### Booting an image with QEMU
+## Booting an image with QEMU
 
 1. Extend the toolchain with QEMU:
 

@@ -3,8 +3,6 @@ title: Seeed reTerminal
 description: How to develop for Seeed reTerminal.
 ---
 
-## Seeed reTerminal
-
 The Seeed reTerminal is a compact Human-Machine Interface (HMI) device that integrates a Raspberry Pi Compute Module 4 with a touchscreen display in a tablet-like form factor, designed for IoT, industrial automation, and edge AI applications.
 
 ## Technical Specifications
