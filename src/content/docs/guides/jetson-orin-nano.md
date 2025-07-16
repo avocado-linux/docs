@@ -3,6 +3,8 @@ title: NVIDIA Jetson Orin Nano Super
 description: How to develop for NVIDIA Jetson Orin Nano Super.
 ---
 
+![Jetson Orin Nano Super](../orin-nano.jpg)
+
 The Jetson Orin Nano Super is a powerful single-board computer that delivers up to 67 TOPS of AI performance while maintaining energy efficiency in a compact form factor.
 
 ## Technical Specifications

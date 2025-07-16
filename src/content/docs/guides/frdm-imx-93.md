@@ -3,6 +3,8 @@ title: NXP FRDM i.MX 93
 description: How to develop for NXP FRDM i.MX 93.
 ---
 
+![FRDM i.MX 93](../frdm-imx-93.jpg)
+
 The FRDM i.MX 93 is a low-cost development board for rapid prototyping. It includes built-in Wi-Fi and Bluetooth and requires extremely little power, making it ideal for modern industrial and IoT applications.
 
 ## Technical Specifications

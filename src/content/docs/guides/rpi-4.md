@@ -3,6 +3,8 @@ title: Raspberry Pi 4
 description: How to develop for Raspberry Pi 4.
 ---
 
+![Raspberry Pi 4](../rpi-4.jpg)
+
 The Raspberry Pi 4 is the most popular single-board computer on the planet. Released in June 2019, it represents a major upgrade in processing power and memory capacity compared to earlier Raspberry Pi models.
 
 ## Technical Specifications
