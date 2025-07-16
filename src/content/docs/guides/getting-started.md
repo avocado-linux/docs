@@ -22,8 +22,8 @@ podman pull avocadolinux/sdk:apollo-edge
 2. Create your workspace:
 
 ```bash
-mkdir avocado
-cd avocado
+mkdir avocado-qemu
+cd avocado-qemu
 ```
 
 3. Start the SDK environment:
@@ -103,8 +103,3 @@ avocado-run-qemu
 ```bash
 systemctl start peridiod
 ```
-
-## systemd-sysext merge
-
-![systemd-sysext merge](../sysext.png)
-
