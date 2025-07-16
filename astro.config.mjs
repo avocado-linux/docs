@@ -19,7 +19,7 @@ export default defineConfig({
 				{
 					label: 'Introduction',
 					items: [
-						{ label: 'Introduction', link: '/' }
+						{ label: 'Avocado OS', link: '/' }
 					]
 				},
 				{
@@ -36,7 +36,7 @@ export default defineConfig({
 					items: [
 						{ label: 'SDK Architecture', link: '/guides/sdk-architecture/' },
 						{ label: 'Development Environment', link: '/guides/development-environment/' },
-						{ label: 'Getting Started', link: '/guides/gettingstarted/' }
+						{ label: 'Getting Started', link: '/guides/getting-started/' }
 					]
 				},
 				{
