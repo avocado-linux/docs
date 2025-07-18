@@ -6,7 +6,7 @@ description: How to set up your Avocado SDK environment.
 ## Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- Podman installed
+- docker installed
 - 20GB+ available disk space
 - Access to Avocado OS base images (online or pre-downloaded)
 
@@ -16,14 +16,14 @@ Fetch pre-built base images and SDK containers:
 
 ```bash
 # Pull SDK container
-podman pull avocadolinux/sdk:apollo-edge
+docker pull avocadolinux/sdk:apollo-edge
 
 # Create a directory to save the SDK to
 mkdir avocado-<target>
 
 # Start development environment
 cd avocado-<target>
-podman run -it --rm -e AVOCADO_SDK_TARGET=<target> -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e AVOCADO_SDK_TARGET=<target> -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
 Replace `<target>` with one of the supported target platforms below.
