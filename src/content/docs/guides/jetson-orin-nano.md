@@ -35,7 +35,7 @@ Get up and running with the Avocado Linux SDK in minutes.
 ### Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- Podman installed
+- docker installed
 - 20GB+ available disk space
 
 ### Installing and running the SDK
@@ -43,7 +43,7 @@ Get up and running with the Avocado Linux SDK in minutes.
 1. Pull the SDK container:
 
 ```bash
-podman pull avocadolinux/sdk:apollo-edge
+docker pull avocadolinux/sdk:apollo-edge
 ```
 
 2. Create your workspace:
@@ -56,5 +56,5 @@ cd avocado-jetson-orin-nano
 3. Start the SDK environment:
 
 ```bash
-podman run -it --rm -e AVOCADO_SDK_TARGET=jetson-orin-nano-devkit-nvme -v $(pwd):/opt:z --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e AVOCADO_SDK_TARGET=jetson-orin-nano-devkit-nvme -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
 ```
