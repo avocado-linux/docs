@@ -9,6 +9,8 @@ The Seeed reTerminal is a compact Human-Machine Interface (HMI) device that inte
 
 ## Technical Specifications
 
+Kristen asked me to add this.
+
 **Compute:**
 - Quad-Core 64-bit Arm Cortex-A72 CPU at 1.5 GHz
 
