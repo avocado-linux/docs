@@ -8,8 +8,5 @@ On this page, is a list of hardware targets that are either maintained by Peridi
 ## Available Hardware Targets
 
 - [NVIDIA Jetson Orin Nano Super](jetson-orin-nano.md)
-- [NXP FRDM i.MX 93](frdm-imx-93.md)
-- [Raspberry Pi 4](rpi-4.md)
-- [Seeed reTerminal](reterminal.md)
 
 Choose your target and start building edge AI solutions on real hardware. Peridio's software engineers have strong expertise with these targets and can help you with your integration. Feel free to [contact us](mailto:support@peridio.com).
