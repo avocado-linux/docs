@@ -10,7 +10,7 @@ description: How to develop for NVIDIA Jetson Orin Nano.
 ❌ Hardware-in-the-Loop (HIL) - Develop and debug from an Avocado SDK container image to this target.
 ❌ Deploy ML inference with Triton - Update ML models live without reboots or restarts.
 🔧 Last Updated: July 23, 2025
-Notes: This target was featured in our Open Source Summit demo. Expect updates as we improve support for hardware-accelerated AI workflows.
+Notes: This target was featured in our [Open Source Summit demo](https://blog.peridio.com/nvidia-jetson-with-avocado-os). Expect updates as we improve support for hardware-accelerated AI workflows.
 :::
 
 ![Jetson Orin Nano](../orin-nano.jpg)
