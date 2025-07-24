@@ -9,7 +9,7 @@ description: How to develop for NVIDIA Jetson Orin Nano.
 ✅ SDK container images – There are x86-64 and aarch64 Avocado SDK container images available for this target.\
 ❌ Provisioning – Provision NVMe storage on this target with Avocado OS.\
 ❌ Hardware-in-the-Loop (HIL) - Develop and debug from an Avocado SDK container image to this target.\
-❌ Deploy ML inference with Triton - Update ML models live without reboots or restarts.\
+❌ Deploy ML inference with Triton - Update ML models live without reboots or restarts.
 
 🔧 Last Updated: July 23, 2025
 
@@ -99,7 +99,7 @@ Links to callout boxes on this page go here
 🟡 NVMe provisioning is under development\
 🟡 Hardware-in-the-Loop (HIL) debugging is under development\
 🔴 Secure boot is not yet supported\
-🔴 Full disk encryption is not yet supported\
+🔴 Full disk encryption is not yet supported
 
 ## Related Resources
 
