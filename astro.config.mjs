@@ -25,7 +25,7 @@ export default defineConfig({
 				{
 					label: 'Hardware',
 					items: [
-						{ label: 'NVIDIA Jetson Orin Nano', link: '/guides/jetson-orin-nano/' }
+						{ label: 'NVIDIA Jetson Orin Nano Developer Kit', link: '/guides/jetson-orin-nano/' }
 					]
 				},
 				{
