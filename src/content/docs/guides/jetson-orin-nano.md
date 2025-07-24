@@ -1,6 +1,6 @@
 ---
-title: NVIDIA Jetson Orin Nano
-description: How to develop for NVIDIA Jetson Orin Nano.
+title: NVIDIA Jetson Orin Nano Developer Kit
+description: How to develop for NVIDIA Jetson Orin Nano Developer Kit.
 ---
 
 :::note[Current Status]
@@ -17,9 +17,9 @@ Notes: This target was featured in our [Open Source Summit demo](https://blog.pe
 
 :::
 
-![Jetson Orin Nano](../orin-nano.jpg)
+![Jetson Orin Nano Developer Kit](../orin-nano.jpg)
 
-The Jetson Orin Nano delivers exceptional performance for real-time ML at the edge—up to 67 TOPS of AI compute. Paired with Avocado OS, you can deploy full inference pipelines in minutes, without the typical headaches of cross-compiling or system reboots.
+The Jetson Orin Nano Developer Kit delivers exceptional performance for real-time ML at the edge—up to 67 TOPS of AI compute. Paired with Avocado OS, you can deploy full inference pipelines in minutes, without the typical headaches of cross-compiling or system reboots.
 Whether you're building computer vision, robotics, or edge AI applications, this target gets you production-ready fast.
 
 ## 🛠 Technical Specifications
@@ -73,18 +73,18 @@ docker run -it --rm -e \
 
 ## ⚙️ Provisioning
 
-We are actively working on a provisioning guide for the Jetson Orin Nano.
+We are actively working on a provisioning guide for the Jetson Orin Nano Developer Kit.
 
 ## 🧰 Hardware-in-the-Loop (HIL)
 
-We are actively working on Hardware-in-the-Loop (HIL) development for the Jetson Orin Nano.
+We are actively working on Hardware-in-the-Loop (HIL) development for the Jetson Orin Nano Developer Kit.
 
 ## 🤖 Deploying ML Inference with Triton
 
 With Avocado OS, you can deploy NVIDIA’s Triton Inference Server in just six commands—no cross-compiling or reflashing required.
 
 Why it matters:
-- Model updates apply *live*, without device reboots
+- Model updates apply *live*, without device reboots or service restarts
 - Works seamlessly with Avocado’s OTA update infrastructure
 - Supports Hardware-in-the-Loop (HIL) testing workflows
 

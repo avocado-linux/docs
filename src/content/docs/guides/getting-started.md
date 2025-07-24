@@ -29,7 +29,12 @@ cd avocado-qemu
 3. Start the SDK environment:
 
 ```bash
-docker run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e \
+  AVOCADO_SDK_TARGET=qemux86-64 \
+  -v $(pwd):/opt/_avocado/src:ro \
+  -v $(pwd)/_avocado:/opt/_avocado:rw \
+  --entrypoint entrypoint.sh \
+  avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
 For a list of supported Avocado SDK targets besides `qemux86-64`, return to the [Development Environment page](../development-environment/).
