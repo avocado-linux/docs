@@ -4,13 +4,17 @@ description: How to develop for NVIDIA Jetson Orin Nano.
 ---
 
 :::note
-✅ Supported – This target is actively maintained and supported by the Avocado OS team.
-✅ SDK container images – There are x86-64 and aarch64 Avocado SDK container images available for this target.
-❌ Provisioning – Provision NVMe storage on this target with Avocado OS.
-❌ Hardware-in-the-Loop (HIL) - Develop and debug from an Avocado SDK container image to this target.
-❌ Deploy ML inference with Triton - Update ML models live without reboots or restarts.
+
+✅ Supported – This target is actively maintained and supported by the Avocado OS team.\
+✅ SDK container images – There are x86-64 and aarch64 Avocado SDK container images available for this target.\
+❌ Provisioning – Provision NVMe storage on this target with Avocado OS.\
+❌ Hardware-in-the-Loop (HIL) - Develop and debug from an Avocado SDK container image to this target.\
+❌ Deploy ML inference with Triton - Update ML models live without reboots or restarts.\
+
 🔧 Last Updated: July 23, 2025
+
 Notes: This target was featured in our [Open Source Summit demo](https://blog.peridio.com/nvidia-jetson-with-avocado-os). Expect updates as we improve support for hardware-accelerated AI workflows.
+
 :::
 
 ![Jetson Orin Nano](../orin-nano.jpg)
@@ -59,7 +63,12 @@ cd avocado-jetson-orin-nano
 3. Start the SDK environment:
 
 ```bash
-docker run -it --rm -e AVOCADO_SDK_TARGET=jetson-orin-nano-devkit-nvme -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e \
+  AVOCADO_SDK_TARGET=jetson-orin-nano-devkit-nvme \
+  -v $(pwd):/opt/_avocado/src:ro \
+  -v $(pwd)/_avocado:/opt/_avocado:rw \
+  --entrypoint entrypoint.sh \
+  avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
 ## ⚙️ Provisioning
@@ -85,12 +94,12 @@ Links to callout boxes on this page go here
 
 ## Target Roadmap/Known Limitations
 
-🟢 GPU-accelerated ML inference is fully supported
-🟡 GPU-accelerated video pipelines are under development
-🟡 NVMe provisioning is under development
-🟡 Hardware-in-the-Loop (HIL) debugging is under development
-🔴 Secure boot is not yet supported
-🔴 Full disk encryption is not yet supported
+🟢 GPU-accelerated ML inference is fully supported\
+🟡 GPU-accelerated video pipelines are under development\
+🟡 NVMe provisioning is under development\
+🟡 Hardware-in-the-Loop (HIL) debugging is under development\
+🔴 Secure boot is not yet supported\
+🔴 Full disk encryption is not yet supported\
 
 ## Related Resources
 
