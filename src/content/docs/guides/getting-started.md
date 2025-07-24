@@ -55,7 +55,7 @@ avocado-build sysext peridiod
 3. Verify that a peridiod system extension raw file was output:
 
 ```bash
-ls -l /opt/_avocado/extensions/sysext/peridiod.raw
+ls -l /opt/_avocado/qemux86-64/extensions/sysext/peridiod.raw
 ```
 
 ## Building a bootable image
@@ -81,7 +81,7 @@ avocado-build image
 4. Verify that a complete system image file was output:
 
 ```bash
-ls -l /opt/_avocado/output/avocado-image-qemu*.img
+ls -l /opt/_avocado/qemux86-64/output/avocado-image-qemu*.img
 ```
 
 ## Booting an image with QEMU
