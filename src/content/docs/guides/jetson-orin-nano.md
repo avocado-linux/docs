@@ -82,6 +82,7 @@ Why it matters:
 - Model updates apply *live*, without device reboots or service restarts
 - Works seamlessly with Avocado’s OTA update infrastructure
 - Supports Hardware-in-the-Loop (HIL) testing workflows
+
 👉 [See how we built this at Open Source Summit →](https://blog.peridio.com/nvidia-jetson-with-avocado-os)
 
 ## Target Roadmap/Known Limitations
