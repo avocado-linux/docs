@@ -30,7 +30,7 @@ Get up and running with the Avocado Linux SDK in minutes.
 ### Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- docker installed
+- Docker installed
 - 20GB+ available disk space
 
 ### Installing and running the SDK
