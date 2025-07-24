@@ -5,21 +5,16 @@ description: How to develop for NVIDIA Jetson Orin Nano Developer Kit.
 
 :::note[Current Status]
 
-✅ Supported – This target is actively maintained and supported by the Avocado OS team.\
-✅ SDK container images – There are x86-64 and aarch64 Avocado SDK container images available for this target.\
-❌ Provisioning – Provision NVMe storage on this target with Avocado OS.\
-❌ Hardware-in-the-Loop (HIL) - Develop and debug from an Avocado SDK container image to this target.\
-❌ Deploy ML inference with Triton - Update ML models live without reboots or restarts.
-
-🔧 Last Updated: July 23, 2025
-
-Notes: This target was featured in our [Open Source Summit demo](https://blog.peridio.com/nvidia-jetson-with-avocado-os). Expect updates as we improve support for hardware-accelerated AI workflows.
+| Supported                     | SDK                                    | Provisioning    |
+|-------------------------------|----------------------------------------|-----------------|
+| 🟢 Target actively maintained | 🟢 x86-64 and aarch64 container images | 🟡 NVMe storage |
 
 :::
 
 ![Jetson Orin Nano Developer Kit](../orin-nano.jpg)
 
 The Jetson Orin Nano Developer Kit delivers exceptional performance for real-time ML at the edge—up to 67 TOPS of AI compute. Paired with Avocado OS, you can deploy full inference pipelines in minutes, without the typical headaches of cross-compiling or system reboots.
+
 Whether you're building computer vision, robotics, or edge AI applications, this target gets you production-ready fast.
 
 ## 🛠 Technical Specifications
@@ -87,10 +82,7 @@ Why it matters:
 - Model updates apply *live*, without device reboots or service restarts
 - Works seamlessly with Avocado’s OTA update infrastructure
 - Supports Hardware-in-the-Loop (HIL) testing workflows
-
-## 🔍 Troubleshooting and Tips
-
-Links to callout boxes on this page go here
+👉 [See how we built this at Open Source Summit →](https://blog.peridio.com/nvidia-jetson-with-avocado-os)
 
 ## Target Roadmap/Known Limitations
 
