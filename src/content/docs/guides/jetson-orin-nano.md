@@ -3,7 +3,7 @@ title: NVIDIA Jetson Orin Nano
 description: How to develop for NVIDIA Jetson Orin Nano.
 ---
 
-:::note
+:::note[Current Status]
 
 ✅ Supported – This target is actively maintained and supported by the Avocado OS team.\
 ✅ SDK container images – There are x86-64 and aarch64 Avocado SDK container images available for this target.\
