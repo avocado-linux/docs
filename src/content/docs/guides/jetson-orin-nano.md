@@ -1,42 +1,44 @@
 ---
-title: NVIDIA Jetson Orin Nano Super
-description: How to develop for NVIDIA Jetson Orin Nano Super.
+title: NVIDIA Jetson Orin Nano Developer Kit
+description: How to develop for NVIDIA Jetson Orin Nano Developer Kit.
 ---
 
-![Jetson Orin Nano Super](../orin-nano.jpg)
+:::note[Current Status]
 
-The Jetson Orin Nano Super is a powerful single-board computer that delivers up to 67 TOPS of AI performance while maintaining energy efficiency in a compact form factor.
+| Supported                     | SDK                                    | Provisioning    |
+|-------------------------------|----------------------------------------|-----------------|
+| 🟢 Target actively maintained | 🟢 x86-64 and aarch64 container images | 🟡 NVMe storage |
 
-## Technical Specifications
+:::
 
-**Compute:**
-- 6-core Arm Cortex-A78AE v8.2 64-bit CPU at 1.7 GHz
-- NVIDIA Ampere GPU with 1024 CUDA cores and 32 tensor cores
-- AI Performance: Up to 67 TOPS (INT8)
-- Memory bandwidth: 102 GB/s
+![Jetson Orin Nano Developer Kit](../orin-nano.jpg)
 
-**Memory & Storage:**
-- 8GB 128-bit LPDDR5
-- 2 x M.2 Key M slots for PCIe NVMe SSDs
-- microSD card slot
+The Jetson Orin Nano Developer Kit delivers exceptional performance for real-time ML at the edge—up to 67 TOPS of AI compute. Paired with Avocado OS, you can deploy full inference pipelines in minutes, without the typical headaches of cross-compiling or system reboots.
 
-**Wireless Connectivity:**
-- Single M.2 Key E wireless module with Wi-Fi and Bluetooth
+Whether you're building computer vision, robotics, or edge AI applications, this target gets you production-ready fast.
 
-**Power Modes:**
-- 7W min
-- 15W standard
-- 25W super
+## 🛠 Technical Specifications
 
-## Getting Started
+| Component        | Details                                                    |
+|------------------|------------------------------------------------------------|
+| CPU              | 6-core Arm Cortex-A78AE v8.2 (1.7 GHz)                     |
+| GPU              | NVIDIA Ampere GPU with 1024 CUDA cores and 32 tensor cores |
+| AI Performance   | Up to 67 TOPS (INT8)                                       |
+| Memory           | 8GB 128-bit LPDDR5                                         |
+| Memory Bandwidth | 102 GB/s                                                   |
+| Storage          | 2 x M.2 Key M slots for PCIe NVMe SSDs                     |
+| Connectivity     | Single M.2 Key E wireless module with Wi-Fi and Bluetooth  |
+| Power Modes      | 7W / 15W / 25W                                             | 
+
+## 🚀 Getting Started
 
 Get up and running with the Avocado Linux SDK in minutes.
 
 ### Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- docker installed
-- 20GB+ available disk space
+- Docker installed
+- 10GB+ available disk space
 
 ### Installing and running the SDK
 
@@ -56,5 +58,44 @@ cd avocado-jetson-orin-nano
 3. Start the SDK environment:
 
 ```bash
-docker run -it --rm -e AVOCADO_SDK_TARGET=jetson-orin-nano-devkit-nvme -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e \
+  AVOCADO_SDK_TARGET=jetson-orin-nano-devkit-nvme \
+  -v $(pwd):/opt/_avocado/src:ro \
+  -v $(pwd)/_avocado:/opt/_avocado:rw \
+  --entrypoint entrypoint.sh \
+  avocadolinux/sdk:apollo-edge /bin/bash
 ```
+
+## ⚙️ Provisioning
+
+We are actively working on a provisioning guide for the Jetson Orin Nano Developer Kit.
+
+## 🧰 Hardware-in-the-Loop (HIL)
+
+We are actively working on Hardware-in-the-Loop (HIL) development for the Jetson Orin Nano Developer Kit.
+
+## 🤖 Deploying ML Inference with Triton
+
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameborder="0" allowfullscreen></iframe>
+
+With Avocado OS, you can deploy NVIDIA’s Triton Inference Server in just six commands—no cross-compiling or reflashing required.
+
+Why it matters:
+- Model updates apply *live*, without device reboots or service restarts
+- Works seamlessly with Avocado’s OTA update infrastructure
+- Supports Hardware-in-the-Loop (HIL) testing workflows
+
+👉 [See how we built this at Open Source Summit →](https://blog.peridio.com/nvidia-jetson-with-avocado-os)
+
+## Target Roadmap/Known Limitations
+
+🟢 GPU-accelerated ML inference is fully supported\
+🟡 GPU-accelerated video pipelines are under development\
+🟡 NVMe provisioning is under development\
+🟡 Hardware-in-the-Loop (HIL) debugging is under development\
+🔴 Secure boot is not yet supported\
+🔴 Full disk encryption is not yet supported
+
+## Related Resources
+
+- [Edge AI with Triton Inference Server](https://blog.peridio.com/nvidia-jetson-with-avocado-os)

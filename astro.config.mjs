@@ -23,6 +23,12 @@ export default defineConfig({
 					]
 				},
 				{
+					label: 'Hardware',
+					items: [
+						{ label: 'NVIDIA Jetson Orin Nano Developer Kit', link: '/guides/jetson-orin-nano/' }
+					]
+				},
+				{
 					label: 'SDK User Guide',
 					items: [
 						{ label: 'SDK Architecture', link: '/guides/sdk-architecture/' },

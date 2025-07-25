@@ -8,8 +8,8 @@ Get up and running with the Avocado Linux SDK in minutes.
 ## Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- docker installed
-- 20GB+ available disk space
+- Docker installed
+- 3GB+ available disk space
 
 ## Installing and running the SDK
 
@@ -29,7 +29,12 @@ cd avocado-qemu
 3. Start the SDK environment:
 
 ```bash
-docker run -it --rm -e AVOCADO_SDK_TARGET=qemux86-64 -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e \
+  AVOCADO_SDK_TARGET=qemux86-64 \
+  -v $(pwd):/opt/_avocado/src:ro \
+  -v $(pwd)/_avocado:/opt/_avocado:rw \
+  --entrypoint entrypoint.sh \
+  avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
 For a list of supported Avocado SDK targets besides `qemux86-64`, return to the [Development Environment page](../development-environment/).
@@ -55,7 +60,7 @@ avocado-build sysext peridiod
 3. Verify that a peridiod system extension raw file was output:
 
 ```bash
-ls -l /opt/_avocado/extensions/sysext/peridiod.raw
+ls -l /opt/_avocado/qemux86-64/extensions/sysext/peridiod.raw
 ```
 
 ## Building a bootable image
@@ -81,7 +86,7 @@ avocado-build image
 4. Verify that a complete system image file was output:
 
 ```bash
-ls -l /opt/_avocado/output/avocado-image-qemu*.img
+ls -l /opt/_avocado/qemux86-64/output/avocado-image-qemu*.img
 ```
 
 ## Booting an image with QEMU

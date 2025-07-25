@@ -7,8 +7,7 @@ On this page, is a list of hardware targets that are either maintained by Peridi
 
 ## Available Hardware Targets
 
-- [NVIDIA Jetson Orin Nano Super](jetson-orin-nano.md)
-- [NXP FRDM i.MX 93](frdm-imx-93.md)
+- [NVIDIA Jetson Orin Nano Developer Kit](jetson-orin-nano.md)
 - [Raspberry Pi 4](rpi-4.md)
 - [Seeed reTerminal](reterminal.md)
 

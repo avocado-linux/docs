@@ -6,8 +6,8 @@ description: How to set up your Avocado SDK environment.
 ## Prerequisites
 
 - Linux development machine (Ubuntu 22.04+, Fedora 39+)
-- docker installed
-- 20GB+ available disk space
+- Docker installed
+- 3GB+ available disk space
 - Access to Avocado OS base images (online or pre-downloaded)
 
 ## Using Pre-built Components
@@ -33,10 +33,9 @@ Replace `<target>` with one of the supported target platforms below.
 Set the `AVOCADO_SDK_TARGET` environment variable to one of the following available Avocado SDK targets when starting an SDK container:
 
 **Arm**:
-- `imx91-frdm`: NXP FRDM i.MX 91 Development Board
-- `imx93-evk`: NXP i.MX 93 Evaluation Kit
-- `imx93-frdm`: NXP FRDM i.MX 93 Development Board
-- `jetson-orin-nano-devkit-nvme`: NVIDIA Jetson Orin Nano Super
+- `imx8mp-evk`: NXP i.MX 8M Plus Evaluation Kit
+- `jetson-orin-nano-devkit-nvme`: NVIDIA Jetson Orin Nano Developer Kit
+- `qemuarm64`: QEMU aarch64 Virtual Machine
 - `raspberrypi4`: Raspberry Pi 4
 - `reterminal`: Seeed reTerminal
 
