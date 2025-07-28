@@ -76,7 +76,7 @@ We are actively working on Hardware-in-the-Loop (HIL) development for the Jetson
 
 ## 🤖 Deploying ML Inference with Triton
 
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameborder="0" allowfullscreen></iframe>
 
 With Avocado OS, you can deploy NVIDIA’s Triton Inference Server in just six commands—no cross-compiling or reflashing required.
 
@@ -85,7 +85,7 @@ Why it matters:
 - Works seamlessly with Avocado’s OTA update infrastructure
 - Supports Hardware-in-the-Loop (HIL) testing workflows
 
-👉 [See how we built this at Open Source Summit →](https://blog.peridio.com/nvidia-jetson-with-avocado-os)
+[See how we built this at Open Source Summit →](https://blog.peridio.com/nvidia-jetson-with-avocado-os)
 
 ## Target Roadmap/Known Limitations
 
@@ -93,8 +93,8 @@ Why it matters:
 🟡 GPU-accelerated video pipelines are under development\
 🟡 NVMe provisioning is under development\
 🟡 Hardware-in-the-Loop (HIL) debugging is under development\
-🔴 Secure boot is not yet supported\
-🔴 Full disk encryption is not yet supported
+🟠 Secure boot is not yet supported\
+🟠 Full disk encryption is not yet supported
 
 ## Related Resources
 
