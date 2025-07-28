@@ -76,7 +76,7 @@ We are actively working on Hardware-in-the-Loop (HIL) development for the Jetson
 
 ## 🤖 Deploying ML Inference with Triton
 
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameborder="0" allowfullscreen></iframe>
 
 With Avocado OS, you can deploy NVIDIA’s Triton Inference Server in just six commands—no cross-compiling or reflashing required.
 
