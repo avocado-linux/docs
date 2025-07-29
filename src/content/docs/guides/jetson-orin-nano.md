@@ -87,7 +87,7 @@ Why it matters:
 
 [See how we built this at Open Source Summit →](https://blog.peridio.com/nvidia-jetson-with-avocado-os)
 
-## Target Roadmap/Known Limitations
+## 🧭 Target Roadmap/Known Limitations
 
 🟢 GPU-accelerated ML inference is fully supported\
 🟡 GPU-accelerated video pipelines are under development\
