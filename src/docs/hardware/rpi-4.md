@@ -11,7 +11,7 @@ description: How to develop for Raspberry Pi 4.
 
 :::
 
-![Raspberry Pi 4](../rpi-4.jpg)
+![Raspberry Pi 4](/img/rpi-4.jpg)
 
 The Raspberry Pi 4 is the world’s most widely adopted single-board computer—powerful, affordable, and perfect for rapid prototyping and deployment. With up to 8GB of RAM and a quad-core Cortex-A72 processor, it’s more than capable of running advanced workloads at the edge.
 
@@ -77,4 +77,3 @@ We are actively working on Hardware-in-the-Loop (HIL) development for the Raspbe
 
 🟡 microSD card provisioning is under development\
 🟡 Hardware-in-the-Loop (HIL) debugging is under development
-

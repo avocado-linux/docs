@@ -11,7 +11,7 @@ description: How to develop for NVIDIA Jetson Orin Nano Developer Kit.
 
 :::
 
-![Jetson Orin Nano Developer Kit](../orin-nano.jpg)
+![Jetson Orin Nano Developer Kit](/img/orin-nano.jpg)
 
 The Jetson Orin Nano Developer Kit delivers exceptional performance for real-time ML at the edge—up to 67 TOPS of AI compute. Paired with Avocado OS, you can deploy full inference pipelines in minutes, without the typical headaches of cross-compiling or system reboots.
 
@@ -76,7 +76,7 @@ We are actively working on Hardware-in-the-Loop (HIL) development for the Jetson
 
 ## 🤖 Deploying ML Inference with Triton
 
-  <iframe width="100%" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" style={{aspectRatio: '16 / 9'}} src="https://www.youtube.com/embed/ioXyUgEH5Wo" frameBorder="0" allowFullScreen></iframe>
 
 With Avocado OS, you can deploy NVIDIA’s Triton Inference Server in just six commands—no cross-compiling or reflashing required.
 

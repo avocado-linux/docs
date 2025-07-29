@@ -11,7 +11,7 @@ description: How to develop for NXP i.MX 8M Plus Evaluation Kit.
 
 :::
 
-![i.MX 8M Plus](../imx-8m-plus.jpg)
+![i.MX 8M Plus](/img/imx-8m-plus.jpg)
 
 The i.MX 8M Plus Evaluation Kit is a powerful and flexible platform for edge AI development. With a quad-core Cortex-A53 processor and an integrated neural processing unit (NPU), it enables real-time ML inference without overloading the CPU—ideal for vision, voice, and industrial applications.
 
@@ -83,4 +83,3 @@ We are actively working on Hardware-in-the-Loop (HIL) development for the i.MX 8
 🟡 Hardware-in-the-Loop (HIL) debugging is under development\
 🟠 Secure boot is not yet supported\
 🟠 Full disk encryption is not yet supported
-

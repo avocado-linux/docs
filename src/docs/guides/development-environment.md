@@ -44,4 +44,4 @@ Set the `AVOCADO_SDK_TARGET` environment variable to one of the following availa
 
 ## Extension Image Build Pipeline
 
-![Extension Image Build Pipeline](../sdk-container.png)
+![Extension Image Build Pipeline](/img/sdk-container.png)
