@@ -32,15 +32,6 @@ const sidebars = {
       label: "Hardware",
       items: [
         "hardware/jetson-orin-nano",
-        {
-          type: "category",
-          label: "Docs",
-          link: {
-            type: "doc",
-            id: "hardware/reterminal",
-          },
-          items: ["hardware/overview"],
-        },
         "hardware/rpi-4",
         "hardware/imx-8m-plus",
       ],
