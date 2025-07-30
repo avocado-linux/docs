@@ -13,7 +13,9 @@ description: How to develop for Raspberry Pi 4.
 
 ![Raspberry Pi 4](../rpi-4.jpg)
 
-The Raspberry Pi 4 is the most popular single-board computer on the planet. Released in June 2019, it represents a major upgrade in processing power and memory capacity compared to earlier Raspberry Pi models.
+The Raspberry Pi 4 is the world’s most widely adopted single-board computer—powerful, affordable, and perfect for rapid prototyping and deployment. With up to 8GB of RAM and a quad-core Cortex-A72 processor, it’s more than capable of running advanced workloads at the edge.
+
+When paired with Avocado OS, developers can accelerate time to production with a streamlined, repeatable Linux development environment—no complex toolchains, no custom Yocto builds.
 
 ## 🛠 Technical Specifications
 
@@ -25,7 +27,7 @@ The Raspberry Pi 4 is the most popular single-board computer on the planet. Rele
 | Memory Bandwidth | 8.5 GB/s                                                   |
 | Storage          | microSD card slot                                          |
 | Connectivity     | Broadcom BCM43455 wireless module with Wi-Fi and Bluetooth |
-| Power Modes      | 3.5W / 5W / 6.5W / 8W                                        |
+| Power Modes      | 3.5W / 5W / 6.5W / 8W                                      |
 
 ## 🚀 Getting Started
 

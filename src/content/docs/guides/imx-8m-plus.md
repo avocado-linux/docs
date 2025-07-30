@@ -13,7 +13,9 @@ description: How to develop for NXP i.MX 8M Plus Evaluation Kit.
 
 ![i.MX 8M Plus](../imx-8m-plus.jpg)
 
-The i.MX 8M Plus Evaluation Kit is a versatile development board built for rapid prototyping. It includes an on-chip NPU, enabling you to run machine learning workloads on the edge without taxing the CPU.
+The i.MX 8M Plus Evaluation Kit is a powerful and flexible platform for edge AI development. With a quad-core Cortex-A53 processor and an integrated neural processing unit (NPU), it enables real-time ML inference without overloading the CPU—ideal for vision, voice, and industrial applications.
+
+Combined with Avocado OS, teams can deploy complex workloads quickly using a consistent, production-ready Linux environment.
 
 ## 🛠 Technical Specifications
 
