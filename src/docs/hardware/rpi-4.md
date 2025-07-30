@@ -11,7 +11,9 @@ description: How to develop for Raspberry Pi 4.
 
 :::
 
-![Raspberry Pi 4](/img/rpi-4.jpg)
+<div style={{textAlign: 'center'}}>
+  <img src="/img/rpi-4.jpg" alt="Raspberry Pi 4" />
+</div>
 
 The Raspberry Pi 4 is the world’s most widely adopted single-board computer—powerful, affordable, and perfect for rapid prototyping and deployment. With up to 8GB of RAM and a quad-core Cortex-A72 processor, it’s more than capable of running advanced workloads at the edge.
 

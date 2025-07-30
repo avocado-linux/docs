@@ -35,15 +35,18 @@ This command generates static content into the `build` directory and can be serv
 
 ```
 docs/
-├── docs/                    # Documentation pages
-│   ├── index.mdx           # Homepage
-│   ├── guides/             # SDK guides and hardware support
-│   └── community/          # Community guidelines
-├── static/                 # Static assets (images, files)
-│   └── img/               # Images referenced in docs
-├── src/                   # Custom React components and CSS
+├── src/
+│   ├── docs/              # Documentation pages
+│   │   ├── index.mdx      # Homepage
+│   │   ├── guides/        # SDK guides and tutorials
+│   │   ├── hardware/      # Hardware-specific documentation
+│   │   └── community/     # Community guidelines
+│   ├── static/            # Static assets (images, files)
+│   │   └── img/          # Images referenced in docs
 │   └── css/
 │       └── custom.css     # Custom styling
+├── public/                # Public assets
+│   └── favicon.svg       # Site favicon
 ├── docusaurus.config.js   # Docusaurus configuration
 ├── sidebars.js           # Sidebar navigation structure
 └── package.json          # Dependencies and scripts
@@ -53,7 +56,7 @@ docs/
 
 ### Adding New Pages
 
-1. Create a new `.md` or `.mdx` file in the appropriate directory under `docs/`
+1. Create a new `.md` or `.mdx` file in the appropriate directory under `src/docs/`
 2. Add the page to `sidebars.js` if you want it to appear in the navigation
 3. Use frontmatter to set the title and description:
 
@@ -70,7 +73,7 @@ Content goes here...
 
 ### Adding Images
 
-1. Place images in `static/img/`
+1. Place images in `src/static/img/`
 2. Reference them in markdown using `/img/your-image.png`
 
 ### Updating Navigation
@@ -112,7 +115,8 @@ npm run serve  # Test the build locally
 
 This site was migrated from Astro Starlight to Docusaurus. Key changes:
 
-- **Content Structure**: Moved from `src/content/docs/` to `docs/`
+- **Content Structure**: Moved from `src/content/docs/` to `src/docs/`
+- **Static Assets**: Moved from `public/` to `src/static/`
 - **Image References**: Updated from relative paths to `/img/` paths
 - **Configuration**: Replaced `astro.config.mjs` with `docusaurus.config.js`
 - **Sidebar**: Converted from Starlight format to Docusaurus sidebar configuration

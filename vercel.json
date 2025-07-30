@@ -24,5 +24,10 @@
   ],
   "github": {
     "enabled": false
+  },
+  "deploymentProtection": {
+    "preview": {
+      "enabled": false
+    }
   }
 }
