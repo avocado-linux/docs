@@ -25,9 +25,9 @@ export default defineConfig({
 				{
 					label: 'Hardware',
 					items: [
-						{ label: 'NVIDIA Jetson Orin Nano Dev Kit', link: '/guides/jetson-orin-nano/' },
-						{ label: 'Raspberry Pi 4', link: '/guides/rpi-4/' },
-						{ label: 'NXP i.MX 8M Plus Evaluation Kit', link: '/guides/imx-8m-plus/' }
+						{ label: 'NVIDIA Jetson Orin Nano Dev Kit', link: '/supported-hardware/jetson-orin-nano/' },
+						{ label: 'Raspberry Pi 4', link: '/supported-hardware/rpi-4/' },
+						{ label: 'NXP i.MX 8M Plus Evaluation Kit', link: '/supported-hardware/imx-8m-plus/' }
 					]
 				},
 				{
