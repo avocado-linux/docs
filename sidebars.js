@@ -31,9 +31,9 @@ const sidebars = {
       type: "category",
       label: "Hardware",
       items: [
-        "hardware/jetson-orin-nano",
-        "hardware/rpi-4",
-        "hardware/imx-8m-plus",
+        "supported-hardware/jetson-orin-nano",
+        "supported-hardware/rpi-4",
+        "supported-hardware/imx-8m-plus",
       ],
     },
     {

@@ -1,708 +1,145 @@
-/**
- * Docusaurus Custom CSS to mimic Starlight design
- * Based on Starlight's props.css color scheme and layout
- */
-
-/* Import Starlight-inspired color variables */
 :root {
-    /* Starlight Colors (dark mode defaults) */
-    --sl-color-white: hsl(0, 0%, 100%);
-    --sl-color-gray-1: hsl(224, 20%, 94%);
-    --sl-color-gray-2: hsl(224, 6%, 77%);
-    --sl-color-gray-3: hsl(224, 6%, 56%);
-    --sl-color-gray-4: hsl(224, 7%, 36%);
-    --sl-color-gray-5: hsl(224, 10%, 23%);
-    --sl-color-gray-6: hsl(224, 14%, 16%);
-    --sl-color-black: hsl(224, 10%, 10%);
+    --ifm-color-white: hsl(0, 0%, 100%);
+    --ifm-link-color: hsl(234, 90%, 60%);
+    --ifm-link-hover-color: hsl(224, 10%, 10%);
+    --ifm-main-menu-color-active: var(--ifm-color-white);
+    --ifm-main-menu-color-background-active: hsl(234, 90%, 60%);
+    --ifm-main-menu-color: hsl(224, 10%, 23%);
+    --ifm-menu-color: hsl(224, 10%, 10%);
+    --ifm-menu-link-sublist-icon-active-filter: invert(1);
+}
 
-    /* Starlight Accent Colors */
-    --sl-color-accent-low: hsl(224, 54%, 20%);
-    --sl-color-accent: hsl(224, 100%, 60%);
-    --sl-color-accent-high: hsl(224, 100%, 85%);
+html[data-theme="dark"] {
+    --ifm-background-surface-color: hsl(224, 14%, 16%);
+    --ifm-body-color: hsl(224, 6%, 77%);
+    --ifm-color-emphasis-300: hsl(224, 10%, 23%);
+    --ifm-color-primary: hsl(224, 100%, 85%);
+    --ifm-header-color: var(--ifm-color-white);
+    --ifm-link-color: hsl(224, 100%, 85%);
+    --ifm-link-hover-color: var(--ifm-color-white);
+    --ifm-main-menu-color-active: hsl(224, 54%, 20%);
+    --ifm-main-menu-color-background-active: hsl(224, 100%, 85%);
+    --ifm-main-menu-color: hsl(224, 6%, 77%);
+    --ifm-main-menu-sublist-color: var(--ifm-color-white);
+    --ifm-menu-color: var(--ifm-color-white);
+    --ifm-menu-link-sublist-icon-active-filter: brightness(0.2) sepia(1)
+        saturate(5) hue-rotate(204deg);
+    --ifm-pagination-nav-border-color: hsl(224, 10%, 23%);
+    --ifm-pagination-nav-color-hover: var(--ifm-color-white);
+    --ifm-pagination-nav-color: var(--ifm-color-white);
+    --ifm-toc-link-color: hsl(224, 6%, 56%);
+    --ifm-toc-link-hover-color: var(--ifm-color-white);
+}
 
-    /* Custom accent colors for better matching */
-    --sl-color-blue: hsl(224, 100%, 66%);
-    --sl-color-blue-light: hsl(224, 100%, 85%);
-
-    /* Text accent color for links */
-    --sl-color-text-invert: var(--sl-color-accent-low);
-    --sl-color-text-accent: hsl(224, 100%, 85%);
-
-    --sl-text-sm: 0.875rem;
-
-    /* Apply Starlight colors to Docusaurus variables */
-    --ifm-color-primary: var(--sl-color-blue);
-    --ifm-color-primary-dark: hsl(224, 100%, 56%);
-    --ifm-color-primary-darker: hsl(224, 100%, 50%);
-    --ifm-color-primary-darkest: hsl(224, 100%, 40%);
-    --ifm-color-primary-light: hsl(224, 100%, 72%);
-    --ifm-color-primary-lighter: hsl(224, 100%, 78%);
-    --ifm-color-primary-lightest: var(--sl-color-blue-light);
-
-    /* Background colors */
-    --ifm-background-color: var(--sl-color-black);
-    --ifm-background-surface-color: var(--sl-color-gray-6);
-
-    /* Text colors */
-    --ifm-color-content: var(--sl-color-gray-2);
-    --ifm-color-content-secondary: var(--sl-color-gray-3);
-
-    /* Navigation */
-    --ifm-navbar-background-color: var(--sl-color-gray-6);
-    --ifm-navbar-text-color: var(--sl-color-gray-2);
-    --ifm-navbar-link-color: var(--sl-color-gray-2);
-    --ifm-navbar-link-hover-color: var(--sl-color-accent-high);
-
-    /* Sidebar */
-    --ifm-sidebar-background-color: var(--sl-color-gray-6);
-    --ifm-menu-color: var(--sl-color-gray-2);
-    --ifm-menu-color-active: var(--sl-color-text-invert);
-    --ifm-menu-color-background-active: var(--sl-color-text-accent);
-
-    /* Code blocks */
-    --ifm-code-font-size: 95%;
-    --ifm-code-background: var(--sl-color-gray-5);
-    --prism-background-color: var(--sl-color-gray-6);
-
-    /* Borders */
-    --ifm-border-color: var(--sl-color-gray-5);
-    --ifm-hr-border-color: var(--sl-color-gray-5);
-
-    /* Cards and containers */
-    --ifm-card-background-color: var(--sl-color-gray-6);
-
-    /* Highlighted code lines */
-    --docusaurus-highlighted-code-line-bg: rgba(224, 224, 255, 0.1);
-
-    /* Typography - matching Starlight */
-    --ifm-font-family-base:
-        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+body {
+    color: var(--ifm-body-color);
+    font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
         "Noto Color Emoji";
-    --ifm-font-family-monospace:
-        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-
-    /* Font sizes - matching Starlight scale */
-    --ifm-font-size-base: 1rem; /* 16px */
-    --ifm-h1-font-size: 2.5rem; /* 40px - Starlight main heading */
-    --ifm-h2-font-size: 2rem; /* 32px - Starlight section heading */
-    --ifm-h3-font-size: 1.5rem; /* 24px - Starlight subsection */
-    --ifm-h4-font-size: 1.25rem; /* 20px - Starlight text-xl */
-    --ifm-h5-font-size: 1.125rem; /* 18px - Starlight text-lg */
-    --ifm-h6-font-size: 1rem; /* 16px - Starlight text-base */
-
-    /* Line heights */
-    --ifm-line-height-base: 1.7; /* Starlight line height */
-    --ifm-heading-line-height: 1.25; /* Starlight heading line height */
-
-    /* Text color adjustments */
-    --ifm-font-color-base: var(--sl-color-gray-1);
-    --ifm-color-content-secondary: var(--sl-color-gray-3);
-
-    /* Layout */
-    --ifm-navbar-height: 3.5rem; /* Starlight nav height */
-    --ifm-sidebar-width: 18.75rem; /* Starlight sidebar width */
-    --ifm-container-width: 100%; /* Full width container */
-    --ifm-container-width-xl: 100%; /* Full width container */
-    --doc-sidebar-width: 280px; /* TOC sidebar width */
-
-    --ifm-menu-link-sublist-active-icon-filter: brightness(0) saturate(100%)
-        invert(15%) sepia(37%) saturate(1352%) hue-rotate(207deg)
-        brightness(95%) contrast(106%);
 }
 
-/* Light mode colors - matching Starlight light theme */
-[data-theme="light"] {
-    --sl-color-white: hsl(224, 10%, 10%);
-    --sl-color-gray-1: hsl(224, 14%, 16%);
-    --sl-color-gray-2: hsl(224, 10%, 23%);
-    --sl-color-gray-3: hsl(224, 7%, 36%);
-    --sl-color-gray-4: hsl(224, 6%, 56%);
-    --sl-color-gray-5: hsl(224, 6%, 77%);
-    --sl-color-gray-6: hsl(224, 20%, 94%);
-    --sl-color-gray-7: hsl(224, 19%, 97%);
-    --sl-color-black: hsl(0, 0%, 100%);
-
-    --sl-color-accent-high: hsl(234, 80%, 30%);
-    --sl-color-accent: hsl(234, 90%, 60%);
-    --sl-color-accent-low: hsl(234, 88%, 90%);
-
-    /* Light mode blue variants */
-    --sl-color-blue: hsl(234, 90%, 60%);
-    --sl-color-blue-light: hsl(234, 88%, 90%);
-
-    /* Text accent color for links in light mode */
-    --sl-color-text-invert: var(--sl-color-black);
-    --sl-color-text-accent: hsl(234, 90%, 50%);
-
-    /* Apply light mode colors */
-    --ifm-color-primary: var(--sl-color-blue);
-    --ifm-color-primary-dark: hsl(234, 90%, 50%);
-    --ifm-color-primary-darker: hsl(234, 90%, 45%);
-    --ifm-color-primary-darkest: hsl(234, 90%, 35%);
-    --ifm-color-primary-light: hsl(234, 90%, 70%);
-    --ifm-color-primary-lighter: hsl(234, 90%, 75%);
-    --ifm-color-primary-lightest: var(--sl-color-blue-light);
-
-    --ifm-background-color: var(--sl-color-black);
-    --ifm-background-surface-color: var(--sl-color-gray-7);
-    --ifm-color-content: var(--sl-color-gray-2);
-    --ifm-color-content-secondary: var(--sl-color-gray-3);
-
-    --ifm-navbar-background-color: var(--sl-color-gray-7);
-    --ifm-navbar-text-color: var(--sl-color-gray-2);
-    --ifm-navbar-link-color: var(--sl-color-gray-2);
-    --ifm-navbar-link-hover-color: var(--sl-color-accent);
-
-    --ifm-sidebar-background-color: var(--sl-color-black);
-    --ifm-menu-color: var(--sl-color-gray-2);
-
-    --ifm-code-background: var(--sl-color-gray-6);
-    --prism-background-color: var(--sl-color-gray-6);
-    --ifm-border-color: var(--sl-color-gray-6);
-    --ifm-hr-border-color: var(--sl-color-gray-6);
-    --ifm-card-background-color: var(--sl-color-gray-7);
-
-    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
-    --ifm-menu-link-sublist-active-icon-filter: invert(1);
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5 {
+    color: var(--ifm-header-color);
 }
 
-/* Responsive typography - matching Starlight breakpoints */
-@media (min-width: 50em) {
-    :root {
-        --ifm-navbar-height: 4rem;
-        --ifm-h1-font-size: 2.625rem; /* 42px - Starlight text-5xl */
-        --ifm-h2-font-size: 2.1875rem; /* 35px - Starlight text-4xl */
-        --ifm-h3-font-size: 1.8125rem; /* 29px - Starlight text-3xl */
-        --ifm-h4-font-size: 1.5rem; /* 24px - Starlight text-2xl */
-    }
+.markdown a {
+    text-decoration: underline;
 }
 
-/* Hero banner styling */
-.heroBanner {
-    padding: 4rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-6) 0%,
-        var(--sl-color-gray-5) 100%
-    );
-}
-
-@media screen and (max-width: 996px) {
-    .heroBanner {
-        padding: 2rem;
-    }
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-/* Navigation improvements */
-.navbar {
-    box-shadow:
-        0px 1px 1px hsla(0, 0%, 0%, 0.12),
-        0px 2px 1px hsla(0, 0%, 0%, 0.24);
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-6) 0%,
-        var(--sl-color-gray-5) 100%
-    ) !important;
-}
-
-.navbar__logo {
-    height: 2rem;
-}
-
-.navbar__title {
-    font-weight: 600;
-    color: var(--ifm-navbar-text-color);
-}
-
-/* Sidebar improvements */
 .menu {
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-6) 0%,
-        var(--sl-color-gray-5) 100%
-    ) !important;
+    background-color: var(--ifm-background-surface-color);
 }
 
 .menu__link {
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    color: var(--sl-color-gray-2);
-    font-weight: normal;
-    padding: 0.3rem 0.5rem;
+    color: var(--ifm-main-menu-color);
 }
+
 .menu__link:hover {
     background: none;
-    color: var(--sl-color-white);
 }
 
-.menu__link--active {
-    background: var(--ifm-menu-color-background-active);
-    color: var(--ifm-menu-color-active);
+.menu__link:not(.menu__link--sublist) {
+    font-size: 0.875rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+    background-color: var(--ifm-main-menu-color-background-active);
+    font-size: 0.875rem;
     font-weight: 600;
-}
-
-.menu__link--active:hover {
-    background-color: var(--ifm-menu-color-background-active);
-    color: var(--ifm-menu-color-active);
-}
-
-.menu__list-item {
-    font-size: var(--sl-text-sm);
-}
-
-.menu__list-item:not(:first-child) {
-    margin-top: 0rem;
 }
 
 .menu__list-item-collapsible:hover {
     background: none;
 }
 
-.menu__list-item-collapsible--active {
-    background: var(--ifm-menu-color-background-active);
-    font-weight: 600;
-}
-
+.menu__list-item-collapsible--active,
 .menu__list-item-collapsible--active:hover {
-    background: var(--ifm-menu-color-background-active);
+    background-color: var(--ifm-main-menu-color-background-active);
 }
 
-.menu__list-item-collapsible .menu__link {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--sl-color-white);
-}
-
-.theme-doc-sidebar-item-category-level-2
-    .menu__list-item-collapsible
-    .menu__link:hover {
-    color: var(--sl-color-white);
-}
-
-.theme-doc-sidebar-item-category-level-2
-    .menu__list-item-collapsible
-    .menu__link.menu__link--sublist {
-    color: var(--sl-color-gray-2);
-}
-
-.menu__list-item-collapsible--active .menu__caret:before {
-    filter: var(--ifm-menu-link-sublist-active-icon-filter);
+.menu__list-item-collapsible--active .menu__caret:before,
+.menu__list-item-collapsible--active .menu__link--sublist-caret:after {
+    filter: var(--ifm-menu-link-sublist-icon-active-filter);
 }
 
 .theme-doc-sidebar-item-category-level-2
     .menu__list-item-collapsible--active
-    .menu__link.menu__link--sublist,
-.theme-doc-sidebar-item-category-level-2
-    .menu__list-item-collapsible
-    .menu__link--active {
-    background: none;
-    color: var(--ifm-menu-color-active);
-}
-
-.theme-doc-sidebar-item-category-level-2 .menu__list-item {
-    margin-bottom: 0.3rem;
+    .menu__link--active.menu__link--sublist {
+    color: var(--ifm-main-menu-color-active);
 }
 
 .theme-doc-sidebar-item-category-level-2
-    .menu__list-item-collapsible
-    .menu__link {
-    font-size: var(--sl-text-sm);
+    .menu__list-item-collapsible--active
+    .menu__link--active.menu__link--sublist:hover {
+    color: var(--ifm-main-menu-color-active);
 }
 
-/* Content improvements - Starlight-style headings */
-.markdown h1 {
-    --ifm-heading-color: var(--sl-color-gray-1);
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    margin-bottom: 1.5rem;
-}
-
-.markdown h2 {
-    color: var(--sl-color-gray-1);
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--ifm-border-color);
-}
-
-.markdown h3 {
-    color: var(--sl-color-gray-1);
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-    color: var(--sl-color-gray-2);
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* Hide anchor links for h4, h5, h6 to make them non-linkable */
-.markdown h4 .anchor,
-.markdown h5 .anchor,
-.markdown h6 .anchor {
-    display: none;
-}
-
-/* Improved paragraph spacing */
-.markdown p {
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-    color: var(--sl-color-gray-2);
-}
-
-/* Starlight-style links */
-.markdown a {
-    color: var(--sl-color-text-accent);
-    text-decoration: underline;
-    font-weight: normal;
-    transition: color 0.2s ease;
-}
-
-.markdown a:hover {
-    color: var(--sl-color-white);
-    text-decoration: underline;
-}
-
-/* Light mode link styling for better contrast */
-[data-theme="light"] .markdown a {
-    color: var(--sl-color-text-accent);
-    text-decoration: underline;
-}
-
-[data-theme="light"] .markdown a:hover {
-    color: var(--sl-color-gray-1);
-    text-decoration: underline;
-}
-
-/* Strong text styling */
-.markdown strong {
-    color: var(--sl-color-gray-1);
+.menu__link--sublist,
+.menu__list-item-collapsible .menu__link--active.menu__link--sublist,
+.menu__list-item-collapsible .menu__link.menu__link--sublist:hover {
+    color: var(--ifm-main-menu-sublist-color);
     font-weight: 600;
 }
 
-/* List improvements */
-.markdown ul,
-.markdown ol {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
+.menu__link--active,
+.menu__link--active:hover {
+    color: var(--ifm-main-menu-color-active);
 }
 
-.markdown li {
-    margin-bottom: 0.5rem;
-    color: var(--sl-color-gray-2);
-    line-height: 1.7;
-}
-
-.markdown li p {
-    margin-bottom: 0.5rem;
-}
-
-/* Code block improvements */
-pre {
-    border-radius: 8px;
-    box-shadow:
-        0px 8px 4px hsla(0, 0%, 0%, 0.08),
-        0px 5px 2px hsla(0, 0%, 0%, 0.08);
-}
-
-code {
-    border-radius: 4px;
-    padding: 0.2rem 0.4rem;
-    background-color: var(--ifm-code-background);
-    border: 1px solid var(--ifm-border-color);
-}
-
-/* Full width layout for main content */
-.main-wrapper {
-    max-width: none !important;
-    width: 100% !important;
-}
-
-.container {
-    max-width: none !important;
-    padding: 0 2rem;
-}
-
-/* Full-width content layout */
-.col.col--9,
-.col.col--12 {
-    max-width: none !important;
-    flex: 1;
-}
-
-/* Table of contents improvements */
-.table-of-contents {
-    position: sticky;
-    top: calc(var(--ifm-navbar-height) + 2rem);
-    height: fit-content;
-    max-height: calc(100vh - var(--ifm-navbar-height) - 4rem);
-    overflow-y: auto;
-    background-color: var(--ifm-background-surface-color);
-    border: 1px solid var(--ifm-border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-}
-
-.table-of-contents__left-border {
-    border-left: 2px solid var(--ifm-border-color);
-    padding-left: 1rem;
-}
-
-.table-of-contents__link {
-    color: var(--sl-color-gray-3);
-    transition: color 0.2s ease;
-}
-
-.table-of-contents__link:hover {
-    color: var(--sl-color-white);
-}
-
-.table-of-contents__link--active {
-    color: var(--sl-color-text-accent);
-}
-
-/* Card styling - Starlight inspired */
-.card {
-    border: 1px solid var(--ifm-border-color);
-    border-radius: 12px;
-    background: var(--ifm-background-surface-color);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
-}
-
-.card:hover {
-    border-color: var(--ifm-color-primary);
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-}
-
-/* Horizontal rule styling */
-.markdown hr {
-    border: none;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--ifm-border-color),
-        transparent
-    );
-    margin: 3rem 0;
-}
-
-/* Button improvements */
-.button {
-    border-radius: 6px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.button--primary {
-    background-color: var(--ifm-color-primary);
-    border-color: var(--ifm-color-primary);
-}
-
-.button--primary:hover {
-    background-color: var(--ifm-color-primary-dark);
-    border-color: var(--ifm-color-primary-dark);
-}
-
-/* Footer improvements */
-.footer {
-    background-color: var(--sl-color-gray-6);
-    border-top: 1px solid var(--ifm-border-color);
-}
-
-[data-theme="light"] .footer {
-    background-color: var(--sl-color-gray-7);
-}
-
-/* Search improvements */
-.DocSearch {
-    --docsearch-primary-color: var(--ifm-color-primary);
-    --docsearch-text-color: var(--ifm-color-content);
-    --docsearch-modal-background: var(--ifm-background-surface-color);
-    --docsearch-searchbox-background: var(--ifm-background-surface-color);
-}
-
-/* Breadcrumbs */
-.breadcrumbs__link {
-    color: var(--ifm-color-content-secondary);
-    transition: color 0.2s ease;
-}
-
-.breadcrumbs__link:hover {
-    color: var(--ifm-color-primary);
-}
-
-/* Alert/Admonition styling */
-.alert {
-    border-radius: 8px;
-    border-left: 4px solid;
-}
-
-.alert--primary {
-    border-left-color: var(--ifm-color-primary);
-    background-color: rgba(var(--ifm-color-primary-rgb), 0.1);
-}
-
-/* Pagination */
-.pagination-nav {
-    display: grid;
-    grid-gap: var(--ifm-spacing-horizontal);
-    gap: var(--ifm-spacing-horizontal);
-    grid-template-columns: repeat(2, 1fr);
-}
-
-/* Single item takes full width */
-.pagination-nav:has(.pagination-nav__link:only-child) {
-    grid-template-columns: 1fr;
-}
-
-.pagination-nav__link {
-    border: 1px solid var(--sl-color-gray-5);
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    background-color: var(--ifm-background-surface-color);
-    color: var(--sl-color-gray-2);
-    display: block;
-    width: 100%;
-    font-weight: normal;
-}
-
-.pagination-nav__link--next {
-    grid-column: 2 / 3;
-    text-align: right;
-}
-
-.pagination-nav__link--prev {
-    grid-column: 1 / 2;
-    text-align: left;
-}
-
-/* When there's only one link, it should span full width */
-.pagination-nav:has(.pagination-nav__link:only-child) .pagination-nav__link {
-    grid-column: 1 / -1;
-}
-
-.pagination-nav__link:hover {
-    border-color: var(--sl-color-gray-3);
-    background-color: var(--sl-color-gray-6);
-    color: var(--sl-color-white);
-    text-decoration: none;
-}
-
-.pagination-nav__sublabel {
-    color: var(--sl-color-gray-3);
-}
-
-.pagination-nav__link:hover .pagination-nav__sublabel {
-    color: var(--sl-color-gray-2);
+.menu__list-item-collapsible .menu__link--active,
+.menu__list-item-collapsible .menu__link:hover {
+    color: var(--ifm-main-menu-color);
 }
 
 .pagination-nav__label {
-    font-weight: 400;
+    font-weight: normal;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 996px) {
-    .navbar__logo {
-        height: 1.5rem;
-    }
-
-    .heroBanner {
-        padding: 2rem 1rem;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    /* Mobile layout adjustments */
-    .container {
-        padding: 0 1rem;
-    }
+.pagination-nav__link {
+    border-color: var(--ifm-pagination-nav-border-color);
+    color: var(--ifm-pagination-nav-color);
 }
 
-/* Tablet responsiveness */
-@media (max-width: 1200px) and (min-width: 997px) {
-    .container {
-        padding: 0 1.5rem;
-    }
+.pagination-nav__sublabel {
+    color: var(--ifm-body-color);
 }
 
-/* Large screen optimization */
-@media (min-width: 1400px) {
-    .container {
-        padding: 0 3rem;
-    }
-}
-
-/* Dark mode specific improvements */
-[data-theme="dark"] {
-    --ifm-background-color: var(--sl-color-black);
-}
-
-[data-theme="dark"] .navbar {
-    box-shadow:
-        0px 1px 1px hsla(0, 0%, 0%, 0.24),
-        0px 2px 1px hsla(0, 0%, 0%, 0.24);
-}
-
-[data-theme="dark"] .heroBanner {
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-6) 0%,
-        var(--sl-color-gray-5) 100%
-    );
-}
-
-/* Light mode specific improvements */
-[data-theme="light"] .navbar {
-    box-shadow:
-        0px 1px 1px hsla(0, 0%, 0%, 0.06),
-        0px 2px 1px hsla(0, 0%, 0%, 0.06);
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-7) 0%,
-        var(--sl-color-gray-6) 100%
-    ) !important;
-}
-
-[data-theme="light"] .menu {
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-7) 0%,
-        var(--sl-color-gray-6) 100%
-    ) !important;
-}
-
-[data-theme="light"] .heroBanner {
-    background: linear-gradient(
-        135deg,
-        var(--sl-color-gray-7) 0%,
-        var(--sl-color-gray-6) 100%
-    );
+.table-of-contents__link:hover {
+    color: var(--ifm-toc-link-hover-color);
 }

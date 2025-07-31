@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "avocado-docs",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "installCommand": "npm ci",
@@ -24,10 +23,5 @@
   ],
   "github": {
     "enabled": false
-  },
-  "deploymentProtection": {
-    "preview": {
-      "enabled": false
-    }
   }
 }

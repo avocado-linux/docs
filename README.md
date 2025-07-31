@@ -39,7 +39,7 @@ docs/
 │   ├── docs/              # Documentation pages
 │   │   ├── index.mdx      # Homepage
 │   │   ├── guides/        # SDK guides and tutorials
-│   │   ├── hardware/      # Hardware-specific documentation
+│   │   ├── supported-hardware/      # Hardware-specific documentation
 │   │   └── community/     # Community guidelines
 │   ├── static/            # Static assets (images, files)
 │   │   └── img/          # Images referenced in docs
