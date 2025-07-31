@@ -83,12 +83,12 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: "EBXD92WI74",
+        appId: "T700H6EL8L",
 
         // Public API key: it is safe to commit it
-        apiKey: "064472b41f14d50c5770b72165385aa7",
+        apiKey: "b64d9bd9c7bafa5cd53ee6bea4588a92",
 
-        indexName: "avocado_linux",
+        indexName: "docs",
       },
 
       prism: {
