@@ -20,4 +20,4 @@ The Avocado SDK provides a containerized development environment consisting of:
 
 ## Architecture Overview
 
-![Architecture Overview](../arch-over.png)
+![Architecture Overview](/img/arch-over.png)

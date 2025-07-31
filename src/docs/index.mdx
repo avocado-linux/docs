@@ -1,15 +1,16 @@
 ---
+slug: /
 title: Welcome to Avocado OS
 description: A modern, composable embedded Linux distribution built for rapid development and production-ready deployment.
 ---
 
 **Avocado OS** is a next-generation embedded Linux distribution that bridges the gap between rapid development and production-grade stability. Built and maintained by [Peridio](https://www.peridio.com/), Avocado OS rethinks how Linux systems are built, deployed, and maintained in modern products.
 
-Whether you’re prototyping on a dev board or deploying to thousands of devices in the field, Avocado helps you move fast **without compromising on reliability, security, or maintainability.**
+Whether you're prototyping on a dev board or deploying to thousands of devices in the field, Avocado helps you move fast **without compromising on reliability, security, or maintainability.**
 
-Avocado OS is 100% open source. It’s built to stand alone — and scales even further when paired with Peridio Fleet.
+Avocado OS is 100% open source. It's built to stand alone — and scales even further when paired with Peridio Fleet.
 
-![Avocado OS](./avocado-linux.png)
+![Avocado OS](/img/avocado-linux.png)
 
 ---
 
@@ -18,17 +19,20 @@ Avocado OS is 100% open source. It’s built to stand alone — and scales even 
 ### 🧩 Composable by Design
 Instead of traditional monolithic builds, Avocado uses a **layered architecture**. Developers assemble systems using a small, immutable base and extend it with modular **system extensions**, **configuration overlays**, and **portable services**. This makes it simple to develop, test, and deploy without managing partitions or modifying core images.
 
-### 🔐 Security Roadmap
-Avocado has plans for:
-- Secure Boot
-- dm-verity for root filesystem integrity
-- Full-disk encryption with LUKS
-- Cryptographic identity for attestation and remote verification
+This approach provides **faster development** by letting you build and test individual components independently, **simplified deployment** through layer updates without full system rebuilds, and **reduced complexity** by eliminating partition management or core image modifications.
+
+### 🔐 Security-First Approach
+Avocado has comprehensive security features planned and in development:
+
+- **Secure Boot**: Cryptographic verification of the boot chain
+- **Root Filesystem Integrity**: dm-verity protection against tampering
+- **Full-Disk Encryption**: LUKS-based encryption for data protection
+- **Device Attestation**: Cryptographic identity for remote verification
 
 These tools ensure that only verified software runs on your devices—from bootloader to user space.
 
 ### 🛠 Built with Yocto, Built to Scale
-Avocado is fully based on the **Yocto Project**, making it highly customizable for your hardware while maintaining consistency across platforms. Whether you're targeting a single-board computer or a production SoC, Avocado provides a clean path from development to deployment.
+Avocado is fully based on the **Yocto Project**, making it highly customizable for your hardware while maintaining consistency across platforms. Whether you're targeting a single-board computer or a production SoC, Avocado provides a clean path from development to deployment using industry-standard embedded Linux toolchain.
 
 ### 🌱 Developer Experience Matters
 With prebuilt layers, sensible defaults, and a vibrant extension ecosystem, Avocado takes the friction out of embedded Linux development. Developers can focus on building features—not wrestling with build systems.
@@ -41,5 +45,4 @@ Avocado OS is an open-source project driven by its community. Join us to shape t
 
 - 💻 [GitHub](https://github.com/avocado-linux/meta-avocado)
 - 💬 [Community Discord](https://discord.com/invite/rH77fKpKAj)
-- 🥑 [Avocado Whitepaper](https://39718632.fs1.hubspotusercontent-na1.net/hubfs/39718632/Avocado%20OS%20Whitepaper.pdf)
----
+- 🥑 [Avocado Whitepaper](https://39718632.fs1.hubspotusercontent-na1.net/hubfs/39718632/Avocado%20OS%20Whitepaper.pdf)

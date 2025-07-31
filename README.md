@@ -1,54 +1,134 @@
-# Starlight Starter Kit: Basics
+# Avocado Linux Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+This is the documentation site for Avocado Linux, built with [Docusaurus](https://docusaurus.io/).
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Local Development
+
+```bash
+npm start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```bash
+npm run build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## 📁 Project Structure
 
 ```
-npm create astro@latest -- --template starlight
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
+docs/
 ├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   ├── docs/              # Documentation pages
+│   │   ├── index.mdx      # Homepage
+│   │   ├── guides/        # SDK guides and tutorials
+│   │   ├── supported-hardware/      # Hardware-specific documentation
+│   │   └── community/     # Community guidelines
+│   ├── static/            # Static assets (images, files)
+│   │   └── img/          # Images referenced in docs
+│   └── css/
+│       └── custom.css     # Custom styling
+├── public/                # Public assets
+│   └── favicon.svg       # Site favicon
+├── docusaurus.config.js   # Docusaurus configuration
+├── sidebars.js           # Sidebar navigation structure
+└── package.json          # Dependencies and scripts
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 📝 Contributing
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+### Adding New Pages
 
-Static assets, like favicons, can be placed in the `public/` directory.
+1. Create a new `.md` or `.mdx` file in the appropriate directory under `src/docs/`
+2. Add the page to `sidebars.js` if you want it to appear in the navigation
+3. Use frontmatter to set the title and description:
 
-## 🧞 Commands
+```markdown
+---
+title: Your Page Title
+description: Brief description of the page
+---
 
-All commands are run from the root of the project, from a terminal:
+# Your Page Title
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Content goes here...
+```
 
-## 👀 Want to learn more?
+### Adding Images
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+1. Place images in `src/static/img/`
+2. Reference them in markdown using `/img/your-image.png`
+
+### Updating Navigation
+
+Edit `sidebars.js` to modify the sidebar structure. The format is:
+
+```javascript
+{
+  type: 'category',
+  label: 'Category Name',
+  items: [
+    'path/to/doc',
+    'another/doc',
+  ],
+}
+```
+
+## 🔧 Configuration
+
+The main configuration is in `docusaurus.config.js`. Key settings include:
+
+- **Site metadata**: Title, tagline, URL
+- **Navigation**: Navbar links and footer
+- **Theme**: Colors and styling options
+- **Plugins**: Additional functionality
+
+## 🌐 Deployment
+
+The site is configured to deploy to `https://docs.avocadolinux.org`. 
+
+For manual deployment:
+
+```bash
+npm run build
+npm run serve  # Test the build locally
+```
+
+## 📚 Migration Notes
+
+This site was migrated from Astro Starlight to Docusaurus. Key changes:
+
+- **Content Structure**: Moved from `src/content/docs/` to `src/docs/`
+- **Static Assets**: Moved from `public/` to `src/static/`
+- **Image References**: Updated from relative paths to `/img/` paths
+- **Configuration**: Replaced `astro.config.mjs` with `docusaurus.config.js`
+- **Sidebar**: Converted from Starlight format to Docusaurus sidebar configuration
+- **Styling**: Replaced Starlight themes with custom CSS
+
+## 🔗 Links
+
+- [Avocado Linux GitHub](https://github.com/avocado-linux/meta-avocado)
+- [Community Discord](https://discord.com/invite/rH77fKpKAj)
+- [Peridio Website](https://www.peridio.com/)
+- [Docusaurus Documentation](https://docusaurus.io/docs)
+
+## 📄 License
+
+Documentation is licensed under the same terms as the Avocado Linux project.

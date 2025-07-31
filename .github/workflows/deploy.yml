@@ -1,9 +1,9 @@
-name: Deploy Avocado docs
+name: Deploy Docusaurus docs
 
 on:
   # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: [ main ]
+    branches: [main]
   # Allow you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
@@ -23,19 +23,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "18"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Astro site
+      - name: Build Docusaurus site
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./build
 
   deploy:
     environment:

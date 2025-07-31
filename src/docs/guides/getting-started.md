@@ -37,7 +37,7 @@ docker run -it --rm -e \
   avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
-For a list of supported Avocado SDK targets besides `qemux86-64`, return to the [Development Environment page](../development-environment/).
+For a list of supported Avocado SDK targets besides `qemux86-64`, return to the [Development Environment page](/guides/development-environment).
 
 Perform all remaining exercises from inside the SDK container.
 
