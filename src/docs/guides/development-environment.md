@@ -20,10 +20,14 @@ docker pull avocadolinux/sdk:apollo-edge
 
 # Create a directory to save the SDK to
 mkdir avocado-<target>
+cd avocado-<target>
 
 # Start development environment
-cd avocado-<target>
-docker run -it --rm -e AVOCADO_SDK_TARGET=<target> -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e AVOCADO_SDK_TARGET=<target> \
+  -v $(pwd):/opt/_avocado/src:ro \
+  -v $(pwd)/_avocado:/opt/_avocado:rw \
+  --entrypoint entrypoint.sh \
+  avocadolinux/sdk:apollo-edge /bin/bash
 ```
 
 Replace `<target>` with one of the supported target platforms below.
