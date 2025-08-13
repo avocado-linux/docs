@@ -66,6 +66,7 @@ docker run -it --rm -e \
   -v $(pwd)/_avocado:/opt/_avocado:rw \
   --entrypoint entrypoint.sh \
   avocadolinux/sdk:apollo-edge /bin/bash
+```
 
 ## ⚙️ Provisioning
 
