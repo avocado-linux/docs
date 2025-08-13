@@ -1,30 +1,38 @@
 ---
-title: Seeed reTerminal
-description: How to develop for Seeed reTerminal.
+title: Seeed Studio reTerminal
+description: How to develop for Seeed Studio reTerminal.
 ---
 
-![reTerminal](/img/reterminal.jpg)
+:::note[Current Status]
 
-The Seeed reTerminal is a compact Human-Machine Interface (HMI) device that integrates a Raspberry Pi Compute Module 4 with a touchscreen display in a tablet-like form factor, designed for IoT, industrial automation, and edge AI applications.
+| Supported                     | SDK                                    | Provisioning    |
+|-------------------------------|----------------------------------------|-----------------|
+| 🟢 Target actively maintained | 🟢 x86-64 and aarch64 container images | 🟡 eMMC storage |
+
+:::
+
+<div style={{textAlign: 'center'}}>
+  <img src="/img/reterminal.jpg" alt="reTerminal" />
+</div>
+
+Seeed Studio's reTerminal is an industrial HMI with the same Raspberry Pi 4 compute module at its heart, but wrapped in a touchscreen interface, expanded I/O, and a form factor designed for real-world deployment.
+
+Since the reTerminal is just a Raspberry Pi 4 with extra peripherals, you can use Avocado OS to develop your application on a Raspberry Pi 4, then quickly retarget your finished Linux image for production hardware.
 
 ## Technical Specifications
 
-**Compute:**
-- Quad-Core 64-bit Arm Cortex-A72 CPU at 1.5 GHz
+| Component        | Details                                                    |
+|------------------|------------------------------------------------------------|
+| CPU              | Quad-core 64-bit Arm Cortex-A72 (1.5 GHz)                  |
+| GPU              | Broadcom VideoCore VI (graphics only, not suitable for AI) |
+| Memory           | 4GB LPDDR4-3200                                            |
+| Memory Bandwidth | 8.5 GB/s                                                   |
+| Storage          | 32GB eMMC                                                  |
+| Connectivity     | Broadcom BCM43455 wireless module with Wi-Fi and Bluetooth |
+| Display          | 5-inch IPS capacitive multi-touch 720x1280 LCD screen      |
+| Power Modes      | 2.6W / 4.9W                                                |
 
-**Memory & Storage:**
-- 4GB LPDDR4-3200
-- 32GB eMMC
-- microSD card slot
-
-**Wireless Connectivity:**
-- Built-in Broadcom BCM43455 wireless module with Wi-Fi and Bluetooth
-
-**Display:**
-- 5-inch IPS capacitive multi-touch 720x1280 LCD screen
-- 293 PPI pixel density
-
-## Getting Started
+## 🚀 Getting Started
 
 Get up and running with the Avocado Linux SDK in minutes.
 
@@ -52,5 +60,26 @@ cd avocado-reterminal
 3. Start the SDK environment:
 
 ```bash
-docker run -it --rm -e AVOCADO_SDK_TARGET=reterminal -v $(pwd):/opt/_avocado/src:ro -v $(pwd)/_avocado:/opt/_avocado:rw --entrypoint entrypoint.sh avocadolinux/sdk:apollo-edge /bin/bash
+docker run -it --rm -e \
+  AVOCADO_SDK_TARGET=reterminal \
+  -v $(pwd):/opt/_avocado/src:ro \
+  -v $(pwd)/_avocado:/opt/_avocado:rw \
+  --entrypoint entrypoint.sh \
+  avocadolinux/sdk:apollo-edge /bin/bash
 ```
+
+## ⚙️ Provisioning
+
+We are actively working on a provisioning guide for the reTerminal.
+
+## 🧰 Hardware-in-the-Loop (HIL)
+
+We are actively working on Hardware-in-the-Loop (HIL) development for the reTerminal.
+
+## 🧭 Target Roadmap/Known Limitations
+
+🟡 eMMC provisioning is under development\
+🟡 Hardware-in-the-Loop (HIL) debugging is under development\
+🟠 Secure boot is not yet supported\
+🟠 Full disk encryption is not yet supported
+

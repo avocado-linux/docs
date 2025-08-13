@@ -34,6 +34,7 @@ const sidebars = {
         "supported-hardware/jetson-orin-nano",
         "supported-hardware/rpi-4",
         "supported-hardware/imx-8m-plus",
+        "supported-hardware/reterminal",
       ],
     },
     {
