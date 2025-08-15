@@ -16,11 +16,13 @@ Get up and running with the Avocado Linux SDK in minutes.
 1. Install the Avocado CLI:
 
 ```bash
-wget https://github.com/avocado-linux/avocado-cli/releases/download/0.5.0/avocado-0.5.0_x86_64-unknown-linux-gnu.tar.gz
-tar -xf avocado-0.5.0_x86_64-unknown-linux-gnu.tar.gz
+wget https://github.com/avocado-linux/avocado-cli/releases/download/0.5.0/avocado-0.5.0_<machine>.tar.gz
+tar -xf avocado-0.5.0_<machine>.tar.gz
 mkdir ~/bin
 mv avocado ~/bin/.
 ```
+
+Replace `<machine>` with `x86_64-unknown-linux-gnu` or `x86_64-apple-darwin` depending on whether you are developing on x86-64 Linux or an Intel-based Mac.
 
 2. Add `$HOME/bin` to your `PATH` environment variable if it is not already there.
 

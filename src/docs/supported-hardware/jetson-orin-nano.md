@@ -42,38 +42,29 @@ Get up and running with the Avocado Linux SDK in minutes.
 
 ### Installing and running the SDK
 
-1. Install the Avocado CLI:
+1. Install the Avocado CLI and append the location of the `avocado` executable to your `PATH` environmant variable.
 
-```bash
-wget https://github.com/avocado-linux/avocado-cli/releases/download/0.5.0/avocado-0.5.0_x86_64-unknown-linux-gnu.tar.gz
-tar -xf avocado-0.5.0_x86_64-unknown-linux-gnu.tar.gz
-mkdir ~/bin
-mv avocado ~/bin/.
-```
-
-2. Add `$HOME/bin` to your `PATH` environment variable if it is not already there.
-
-3. Create your project workspace:
+2. Create your project workspace:
 
 ```bash
 mkdir avocado-jetson-orin-nano
 ```
 
-4. Initialize a new project:
+3. Initialize a new project:
 
 ```bash
 cd avocado-jetson-orin-nano
 avocado init
 ```
 
-5. Replace `qemux86-64` with `jetson-orin-nano-devkit-nvme` as `target` in `avocado.toml`:
+4. Replace `qemux86-64` with `jetson-orin-nano-devkit-nvme` as `target` in `avocado.toml`:
 
 ```bash
 [runtime.dev]
 target = "jetson-orin-nano-devkit-nvme"
 ```
 
-6. Install all components (SDK, extensions, and runtime dependencies):
+5. Install all components (SDK, extensions, and runtime dependencies):
 
 ```bash
 avocado install -f
