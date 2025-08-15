@@ -84,7 +84,7 @@ We are actively working on Hardware-in-the-Loop (HIL) development for the reTerm
 
 We take a computer vision application running on a Raspberry Pi 4 and move it to the Seeed Studio reTerminal in under 10 minutes—with no code changes and no rebuilds.
 
-### Why it matters
+**Why it matters**
 
 Hardware changes are one of the most common sources of delays in embedded projects. Avocado OS makes hardware choice a late-stage decision—not a risky one—by keeping your build environment consistent across devices.
 
