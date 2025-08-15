@@ -80,6 +80,21 @@ We are actively working on a provisioning guide for the reTerminal.
 
 We are actively working on Hardware-in-the-Loop (HIL) development for the reTerminal.
 
+## 🤖 Zero-Friction Hardware Retargeting: Raspberry Pi 4 → reTerminal
+
+We take a computer vision application running on a Raspberry Pi 4 and move it to the Seeed Studio reTerminal in under 10 minutes—with no code changes and no rebuilds.
+
+### Why it matters
+
+Hardware changes are one of the most common sources of delays in embedded projects. Avocado OS makes hardware choice a late-stage decision—not a risky one—by keeping your build environment consistent across devices.
+
+This walkthrough covers:
+- End-to-end retargeting from Raspberry Pi 4 to reTerminal
+- How Avocado OS removes BSP complexity
+- The exact steps for going from dev board to production-ready hardware
+
+[Read the full walkthrough →](https://blog.peridio.com/zero-friction-hardware-retargeting-raspberry-pi-4-to-reterminal-with-avocado-os)
+
 ## 🧭 Target Roadmap/Known Limitations
 
 🟡 eMMC provisioning is under development\
