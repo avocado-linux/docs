@@ -5,7 +5,7 @@ description: How to set up your Avocado SDK environment.
 
 ## Prerequisites
 
-- Linux development machine (Ubuntu 22.04+, Fedora 39+)
+- A Mac (macOS 10.12+) or Linux (Ubuntu 22.04+, Fedora 39+) development machine
 - Docker installed
 - 3GB+ available disk space
 - Access to Avocado OS base images (online or pre-downloaded)
@@ -15,26 +15,22 @@ description: How to set up your Avocado SDK environment.
 Fetch pre-built base images and SDK containers:
 
 ```bash
-# Pull SDK container
-docker pull avocadolinux/sdk:apollo-edge
+# Create a project directory to save the SDK to
+mkdir foo
 
-# Create a directory to save the SDK to
-mkdir avocado-<target>
-cd avocado-<target>
+# Initialize a new project
+cd foo
+avocado init
 
-# Start development environment
-docker run -it --rm -e AVOCADO_SDK_TARGET=<target> \
-  -v $(pwd):/opt/_avocado/src:ro \
-  -v $(pwd)/_avocado:/opt/_avocado:rw \
-  --entrypoint entrypoint.sh \
-  avocadolinux/sdk:apollo-edge /bin/bash
+# Install all components (SDK, extensions, and runtime dependencies)
+avocado install -f
 ```
 
-Replace `<target>` with one of the supported target platforms below.
+The SDK target defaults to the QEMU x86-64 virtual machine. Choose from one of the following available SDK targets when starting a new project.
 
 ## Supported Target Platforms
 
-Set the `AVOCADO_SDK_TARGET` environment variable to one of the following available Avocado SDK targets when starting an SDK container:
+Set `target` under `[runtime.dev]` in `avocado.toml` to one of the following available Avocado SDK targets before initializing a new project:
 
 **Arm**:
 - `imx8mp-evk`: NXP i.MX 8M Plus Evaluation Kit

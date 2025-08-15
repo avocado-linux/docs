@@ -37,34 +37,38 @@ Get up and running with the Avocado Linux SDK in minutes.
 
 ### Prerequisites
 
-- Linux development machine (Ubuntu 22.04+, Fedora 39+)
+- A Mac (macOS 10.12+) or Linux (Ubuntu 22.04+, Fedora 39+) development machine
 - Docker installed
 - 3GB+ available disk space
 
 ### Installing and running the SDK
 
-1. Pull the SDK container:
+1. Install the Avocado CLI and append the location of the `avocado` executable to your `PATH` environmant variable.
 
-```bash
-docker pull avocadolinux/sdk:apollo-edge
-```
-
-2. Create your workspace:
+2. Create your project workspace:
 
 ```bash
 mkdir avocado-rpi4
-cd avocado-rpi4
 ```
 
-3. Start the SDK environment:
+3. Initialize a new project:
 
 ```bash
-docker run -it --rm -e \
-  AVOCADO_SDK_TARGET=raspberrypi4 \
-  -v $(pwd):/opt/_avocado/src:ro \
-  -v $(pwd)/_avocado:/opt/_avocado:rw \
-  --entrypoint entrypoint.sh \
-  avocadolinux/sdk:apollo-edge /bin/bash
+cd avocado-rpi4
+avocado init
+```
+
+4. Replace `qemux86-64` with `raspberrypi4` as `target` in `avocado.toml`:
+
+```bash
+[runtime.dev]
+target = "raspberrypi4"
+```
+
+5. Install all components (SDK, extensions, and runtime dependencies):
+
+```bash
+avocado install -f
 ```
 
 ## ⚙️ Provisioning
