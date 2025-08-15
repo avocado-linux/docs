@@ -14,9 +14,9 @@ The Avocado SDK provides a containerized development environment consisting of:
 - Target sysroots for development
 
 **Build Tools**:
-- `avocado ext build <extension>`: Extension image building
-- `avocado runtime build default`: Linux image building
-- `avocado provision --runtime dev`: Device provisioning
+- `avocado ext build --extension <extension>`: Extension image building
+- `avocado runtime build --runtime dev`: Linux image building
+- `avocado provision --runtime dev`: Linux image provisioning
 - `avocado sdk run -ie vm dev`: QEMU testing
 
 ## Architecture Overview

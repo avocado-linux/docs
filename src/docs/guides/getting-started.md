@@ -30,30 +30,18 @@ mv avocado ~/bin/.
 mkdir foo
 ```
 
-4. Initialize a new project.
+4. Initialize a new project:
 
 ```bash
 cd foo
 avocado init
 ```
 
-5. Change `target` under `[runtime.dev]` and `[sdk.dependencies]` in `avocado.toml` accordingly if you are developing on Apple Silicon.
-
-```bash
-[runtime.dev]
-target = "qemuarm64"
-
-[sdk.dependencies]
-nativesdk-qemu-system-arm64 = "*"
-```
-
-6. Install all components (SDK, extensions, and runtime dependencies).
+5. Install all components (SDK, extensions, and runtime dependencies):
 
 ```bash
 avocado install -f
 ```
-
-For a list of supported Avocado SDK targets, return to the [Development Environment page](/guides/development-environment).
 
 ## Building an extension image
 
@@ -97,7 +85,7 @@ sudo sh -c 'echo "hello from /etc" > _avocado/qemux86-64/extensions/hello-world/
 sudo sh -c 'echo "hello from /usr" > _avocado/qemux86-64/extensions/hello-world/usr/hello-world'
 ```
 
-5. Build `hello-world` extension:
+5. Build the `hello-world` extension:
 
 ```bash
 avocado ext build --extension hello-world
@@ -105,7 +93,7 @@ avocado ext build --extension hello-world
 
 ## Building a bootable image
 
-1. Build all components (SDK compile, extensions, and runtime images).
+1. Build all components (SDK compile, extensions, and runtime images):
 
 ```bash
 avocado build
@@ -119,7 +107,7 @@ avocado provision --runtime dev
 
 ## Booting an image with QEMU
 
-1. Run image as a QEMU virtual machine:
+1. Run image on a QEMU virtual machine:
 
 ```bash
 avocado sdk run -ie vm dev
