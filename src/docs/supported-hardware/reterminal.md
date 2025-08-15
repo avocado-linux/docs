@@ -44,28 +44,41 @@ Get up and running with the Avocado Linux SDK in minutes.
 
 ### Installing and running the SDK
 
-1. Pull the SDK container:
+1. Install the Avocado CLI:
 
 ```bash
-docker pull avocadolinux/sdk:apollo-edge
+wget https://github.com/avocado-linux/avocado-cli/releases/download/0.5.0/avocado-0.5.0_x86_64-unknown-linux-gnu.tar.gz
+tar -xf avocado-0.5.0_x86_64-unknown-linux-gnu.tar.gz
+mkdir ~/bin
+mv avocado ~/bin/.
 ```
 
-2. Create your workspace:
+2. Add `$HOME/bin` to your `PATH` environment variable if it is not already there.
+
+3. Create your project workspace:
 
 ```bash
 mkdir avocado-reterminal
-cd avocado-reterminal
 ```
 
-3. Start the SDK environment:
+4. Initialize a new project:
 
 ```bash
-docker run -it --rm -e \
-  AVOCADO_SDK_TARGET=reterminal \
-  -v $(pwd):/opt/_avocado/src:ro \
-  -v $(pwd)/_avocado:/opt/_avocado:rw \
-  --entrypoint entrypoint.sh \
-  avocadolinux/sdk:apollo-edge /bin/bash
+cd avocado-reterminal
+avocado init
+```
+
+5. Replace `qemux86-64` with `reterminal` as `target` in `avocado.toml`:
+
+```bash
+[runtime.dev]
+target = "reterminal"
+```
+
+6. Install all components (SDK, extensions, and runtime dependencies):
+
+```bash
+avocado install -f
 ```
 
 ## ⚙️ Provisioning
